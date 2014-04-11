@@ -1,0 +1,61 @@
+﻿/** HALL OF FAME */
+#rhs-hall-of-fame-table {
+    border-collapse:collapse;
+    width:100%;
+}
+#rhs-hall-of-fame-table tr td {
+    padding: 7px;
+    width: 50%;
+}
+#rhs-hall-of-fame-table tr th {
+    padding: 7px;
+    text-align: left;
+}
+#rhs-hall-of-fame-table tr td a {
+    cursor: pointer;
+    font-weight: bold;
+}
+.rhs-hall-of-fame-collapsible-row {
+    display:none;
+}
+.rhs-hall-of-fame-selected {
+    background-color:#E0E6F8;
+    border: 1px solid #A9BCF5;
+}
+
+/** ATHLETICS CALENDAR FEEDS */
+#rhs-sports-calendar-feed-table th {
+    text-align:left;
+}
+.rhs-sports-calendar-feed-table-row-spacer {
+    height: 11px;
+}
+/* first column */
+#rhs-sports-calendar-feed-table tr th:first-child, #rhs-sports-calendar-feed-table tr td:first-child {
+    
+}
+/* second column */
+#rhs-sports-calendar-feed-table tr th:first-child + th, #rhs-sports-calendar-feed-table tr td:first-child + td {
+    padding-left: 14px;
+    width: 52px;
+}
+/* third column */
+#rhs-sports-calendar-feed-table tr th:first-child + th + th, #rhs-sports-calendar-feed-table tr td:first-child + td + td {
+    padding-left: 14px;
+    width: 60px;
+}
+/* fourth column */
+#rhs-sports-calendar-feed-table tr th:first-child + th + th + th, #rhs-sports-calendar-feed-table tr td:first-child + td + td + td {
+    padding-left: 14px;
+}
+
+/** SUMMER CAMP AND SCHOOLS TABLES */
+.rhs-summer-camp-school-table {
+	width:100%;
+}
+.rhs-summer-camp-school-table > tbody > tr > td:first-child {
+	width:125px;
+}
+.rhs-summer-camp-school-table tr td {
+	padding:7px;	
+}
