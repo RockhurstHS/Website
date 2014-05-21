@@ -1,4 +1,7 @@
-﻿/* CUSTOM STYLESHEET FOR ROCKHURST H.S. */
+﻿/* CUSTOM STYLESHEET FOR ROCKHURST H.S. 
+ * original stylesheet preserved at https://github.com/RockhurstHS/Website/blob/341924db1ece5dc6d64d15a063c33e6730e23fc4/Custom%20-%20Rockhurst%20HS.css
+ * This is edited for responsive layout, using 960px as base context
+ */
 
 /* --- CSS RESET --- */
 
@@ -548,7 +551,10 @@ body {
 }
 
 #wrapContent {
-    background: url('image/layout/bg_wrapContent.jpg') no-repeat 50% 0px;
+    background-image: url('image/layout/bg_wrapContent.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 *.container #wrapHeader, #utilityWrap, #wrapNav, #wrapNav .gutter, #wrapMedia, #contentWrap, #wrapContentOuter, #wrapContentInner, #wrapFooter .bodyGutter {
@@ -566,19 +572,17 @@ body {
     width: 100%;
     height: 4.8828125%; /* 50p / 1024p */
     overflow: hidden;
-
     /* background: url('image/layout/bg_wrapUtility.jpg') repeat-x 50% top; */
     background: rgb(69,72,77); /* Old browsers */
-/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ1NDg0ZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-    background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -moz-linear-gradient(top, rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(69,72,77,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+    background: -webkit-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-8 */
-
 }
 
     #wrapUtility .gutter {
@@ -599,7 +603,7 @@ body {
 
 #utilityMenu {
     float: right;
-    margin-left: 10px;
+    margin-left: 1.04166666666667%; /* 10px/960 */
 }
 /* logo, quick links, and social media */
 #wrapHeader {
@@ -643,11 +647,11 @@ body {
     margin-bottom: 6px;
 }
 
-#audienceNav {
+.audienceNav {
     color: #fff39f;
 }
 
-    #audienceNav .gutter {
+    .audienceNav .gutter {
         padding: 4px 1px 0 0;
     }
 /* main nav  */
@@ -745,9 +749,9 @@ img.banner, .banner img {
 }
 
     #wrapFooter .bodyGutter {
-        padding: 20px 10px 15px;
-        background: url('image/layout/bg_wrapFooter.jpg') no-repeat center top;
-}
+        padding: 20px 1.04166666666667% 15px; /* 20px 10px/960 15px; */
+        /* background: url('image/layout/bg_wrapFooter.jpg') no-repeat center top; */
+    }
 
     #wrapFooter p {
         padding: 0;
@@ -758,16 +762,16 @@ img.banner, .banner img {
 /* logo */
 #wrapCopyright {
     float: left;
-    width: 120px;
+    width: 12.5%; /* 120/960 */
 }
 
     #wrapCopyright .gutter {
-        padding: 0 0 0 27px;
+        padding: 0 0 0 23.89380530973451%; /* 0 0 0 27/113; */
     }
 /* slogan */
 #wrapFooterContact {
     float: right;
-    width: 805px;
+    width: 83.85416666666667%; /* 805/960 */
 }
 
     #wrapFooterContact .gutter {
@@ -783,16 +787,16 @@ img.banner, .banner img {
             font-style: italic;
             color: #999;
             font-weight: normal;
-            line-height: 1.3;
+            /* line-height: 1.3; */
         }
 /* address & menu */
 #wrapFooterBottom {
     float: right;
-    width: 805px;
+    width: 83.85416666666667%; /* 805/960 */
 }
 
     #wrapFooterBottom .gutter {
-        padding: 5px 0 15px 0;
+        padding: 0.1851851851851852% 0 0.5555555555555556% 0; /* 5px/27 0 15px/27 0; */
     }
 
         #wrapFooterBottom .gutter p {
@@ -1056,7 +1060,7 @@ img.banner, .banner img {
 
             .slideshow .slideNav .navItems a.current {
                 background: url('image/layout/bg_slideshow_dot_selected.png') no-repeat 50% 50%;
-}
+            }
 /* caption content */
 .slideshow .content {
     position: absolute;
@@ -1318,7 +1322,7 @@ span.taRight {
             text-decoration: none;
         }
 
-#audienceNav .menu {
+.audienceNav .menu {
     width: auto;
     float: right;
     position: relative;
@@ -1326,14 +1330,14 @@ span.taRight {
     z-index: 200;
 }
 
-    #audienceNav .menu li {
+    .audienceNav .menu li {
         display: block;
         float: left;
         margin-left: 5px;
         padding: 0;
     }
 
-        #audienceNav .menu li ul {
+        .audienceNav .menu li ul {
             display: none;
             margin: 0;
             padding: 5px 0 10px;
@@ -1343,12 +1347,12 @@ span.taRight {
             border-bottom: 1px solid #ccc;
         }
 
-        #audienceNav .menu li.first {
+        .audienceNav .menu li.first {
             margin-left: 0;
             padding-left: 0;
         }
 
-        #audienceNav .menu li a {
+        .audienceNav .menu li a {
             color: #515151;
             text-decoration: none;
             font-weight: bold;
@@ -1359,13 +1363,13 @@ span.taRight {
             text-transform: uppercase;
         }
 
-            #audienceNav .menu li a:hover {
+            .audienceNav .menu li a:hover {
                 -moz-opacity: 0.80;
                 opacity: 0.80;
                 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=80);
             }
 
-        #audienceNav .menu li:hover ul {
+        .audienceNav .menu li:hover ul {
             display: block;
             position: absolute;
             top: 34px;
@@ -1374,22 +1378,22 @@ span.taRight {
             z-index: 200;
         }
         /* quicklinks */
-        #audienceNav .menu li.parent {
+        .audienceNav .menu li.parent {
             background: url('image/layout/bg_quicklinks_left.png') no-repeat left 50%;
-}
+        }
 
-            #audienceNav .menu li.parent a {
+            .audienceNav .menu li.parent a {
                 padding: 0 36px 0 16px;
                 background: url('image/layout/bg_quicklinks_right.png') no-repeat right 50%;
-}
+            }
 
-            #audienceNav .menu li.parent a, #audienceNav .menu li.parent ul li a:hover {
+            .audienceNav .menu li.parent a, .audienceNav .menu li.parent ul li a:hover {
                 -moz-opacity: 1;
                 opacity: 1;
                 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=100);
             }
 
-            #audienceNav .menu li.parent ul li {
+            .audienceNav .menu li.parent ul li {
                 display: block;
                 float: none;
                 border: none;
@@ -1398,7 +1402,7 @@ span.taRight {
                 background: none;
             }
 
-                #audienceNav .menu li.parent ul li a {
+                .audienceNav .menu li.parent ul li a {
                     display: block;
                     line-height: 20px;
                     height: auto;
@@ -1412,36 +1416,36 @@ span.taRight {
                     color: #003ca2;
                 }
 
-                    #audienceNav .menu li.parent ul li a:hover {
+                    .audienceNav .menu li.parent ul li a:hover {
                         color: #454545;
                     }
 
-                #audienceNav .menu li.parent ul li.last a {
+                .audienceNav .menu li.parent ul li.last a {
                     border-bottom: none;
                 }
         /* social media */
-        #audienceNav .menu li.facebook a, #audienceNav .menu li.twitter a, #audienceNav .menu li.youtube a {
+        .audienceNav .menu li.facebook a, .audienceNav .menu li.twitter a, .audienceNav .menu li.youtube a {
             height: 39px;
             width: 38px;
             text-indent: -9999em;
         }
 
-            #audienceNav .menu li.facebook a:hover, #audienceNav .menu li.twitter a:hover, #audienceNav .menu li.youtube a:hover {
+            .audienceNav .menu li.facebook a:hover, .audienceNav .menu li.twitter a:hover, .audienceNav .menu li.youtube a:hover {
             }
 
-        #audienceNav .menu li.facebook a {
+        .audienceNav .menu li.facebook a {
             background: url('image/layout/icon_facebook.jpg') no-repeat left top;
-}
+        }
 
-        #audienceNav .menu li.twitter a {
+        .audienceNav .menu li.twitter a {
             background: url('image/layout/icon_twitter.jpg') no-repeat left top;
-}
+        }
 
-        #audienceNav .menu li.youtube a {
+        .audienceNav .menu li.youtube a {
             background: url('image/layout/icon_youtube.jpg') no-repeat left top;
-}
+        }
 
-        #audienceNav .menu li.facebook ul, #audienceNav .menu li.twitter ul, #audienceNav .menu li.youtube ul {
+        .audienceNav .menu li.facebook ul, .audienceNav .menu li.twitter ul, .audienceNav .menu li.youtube ul {
             display: none;
         }
 
@@ -1484,7 +1488,7 @@ span.taRight {
             display: block;
             color: #454545;
             background: url('image/layout/bg_wrapNav_hover.jpg') repeat-x;
-}
+        }
 
         #wrapNav .menu li:hover ul {
             display: block;
@@ -2419,7 +2423,7 @@ input[type="button"].QuickSearchButton {
     .buttonLink:hover, #TB .buttonLink:hover {
         color: #454545 !important;
         background: url('image/layout/bg_wrapNav_hover.jpg') repeat-x;
-}
+    }
 /* Giving Search */
 
 .GivingSearchSearchForm {
@@ -2493,3 +2497,59 @@ input[type="button"].QuickSearchButton {
 .GivingSearchResultLink {
     padding: 0;
 }
+
+#educatingYoungMenSince1910 {
+    display: inline;
+}
+
+#socialMediaButtons {
+    display: inline;
+}
+
+
+/** MEDIA QUERIES OVERRIDE PREVIOUS STYLES IF THE VISITING BROWSER MATCHES THE QUERY */
+
+
+/* desktops 
+@media screen and (min-width: 1024px) {
+    
+}*/
+
+/* TABLETS */
+@media screen and (max-width: 768px) {
+    /* logo */
+    #wrapCopyright {
+        float: none;
+        padding: 0px;
+        text-align:center;
+        margin: 0px auto;
+    }
+
+    /* slogan */
+    #wrapFooterContact {
+        float: none;
+        width: 100%;
+        text-align:center;
+        margin: 0px auto;
+    }
+
+        #wrapFooterContact .gutter {
+            float: none;
+            width: 100%;
+            text-align:center;
+            margin: 0px auto;
+        }
+
+    /* address & menu */
+    #wrapFooterBottom {
+        float: none;
+        width: 100%;
+        text-align:center;
+        margin: 0px auto;
+    }
+}
+
+/* phones 
+@media screen and (max-width: 480px) {
+    
+}*/
