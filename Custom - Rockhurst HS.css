@@ -2520,36 +2520,51 @@ input[type="button"].QuickSearchButton {
     /* logo */
     #wrapCopyright {
         float: none;
-        padding: 0px;
-        text-align:center;
+        width: 100%;
+        text-align: center;
         margin: 0px auto;
     }
 
+        #wrapCopyright .gutter {
+            padding: 0px;
+        }
     /* slogan */
     #wrapFooterContact {
         float: none;
         width: 100%;
-        text-align:center;
-        margin: 0px auto;
+        text-align: center;
     }
 
         #wrapFooterContact .gutter {
             float: none;
             width: 100%;
-            text-align:center;
-            margin: 0px auto;
         }
 
     /* address & menu */
     #wrapFooterBottom {
         float: none;
         width: 100%;
-        text-align:center;
-        margin: 0px auto;
     }
+
+        #wrapFooterBottom .gutter {
+            padding: 0.1851851851851852% 0 0.5555555555555556% 0; /* 5px/27 0 15px/27 0; */
+        }
+
+            #wrapFooterBottom .gutter p {
+                float: none;
+                text-transform: uppercase;
+                text-align: center;
+            }
+
+        #wrapFooterBottom .menu {
+            float: none;
+            text-align:center;
+        }
 }
 
-/* phones 
+/* PHONES */
 @media screen and (max-width: 480px) {
-    
-}*/
+    #wrapFooterContact .gutter p {
+        font-size: 1.213em;
+    }
+}
