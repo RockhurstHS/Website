@@ -2356,8 +2356,8 @@ select.BBFormDisplaySelectWithOther {
 /* Quick Search  */
 
 *.QuickSearchFormTable {
-    width: 169px;
-    height: 24px;
+    width: 96.57142857142857%; /* 169/175 */
+    height: 1.5em; /* 24/16 */
     border-collapse: collapse;
     float: right;
     background: url('image/layout/bg_quickSearch.jpg') no-repeat left top;
@@ -2517,6 +2517,21 @@ input[type="button"].QuickSearchButton {
 
 /* TABLETS */
 @media screen and (max-width: 768px) {
+    #search {
+        width: 100%; /* 175p/960p */
+        float: none;
+        clear: none;
+        padding: 0 0 0.13888889% 0.41666667%; /* 5/36 15/36 */
+    }
+    *.QuickSearchFormTable {
+        width: 100%;
+        float: none;
+    }
+    #utilityMenu {
+        float: none;
+        margin-left: 1.04166666666667%; /* 10px/960 */
+        width: 100%;
+    }
     /* logo */
     #wrapCopyright {
         float: none;
@@ -2558,7 +2573,7 @@ input[type="button"].QuickSearchButton {
 
         #wrapFooterBottom .menu {
             float: none;
-            text-align:center;
+            text-align: center;
         }
 }
 
