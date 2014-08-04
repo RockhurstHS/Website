@@ -551,10 +551,12 @@ body {
 }
 
 #wrapContent {
-    background-image: url('image/layout/bg_wrapContent.jpg');
+    /*
+    background-image: none;  url('image/layout/bg_wrapContent.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    */
 }
 
 *.container #wrapHeader, #utilityWrap, #wrapNav, #wrapNav .gutter, #wrapMedia, #contentWrap, #wrapContentOuter, #wrapContentInner, #wrapFooter .bodyGutter {
@@ -2531,6 +2533,9 @@ input[type="button"].QuickSearchButton {
         float: none;
         margin-left: 1.04166666666667%; /* 10px/960 */
         width: 100%;
+    }
+    #wrapContent {
+        background-image: none;
     }
     /* logo */
     #wrapCopyright {
