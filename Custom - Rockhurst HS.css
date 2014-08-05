@@ -156,6 +156,7 @@ h6 {
 }
 
     #home #wrapSectionPrimary h2 a {
+        font-size: 1em;
         color: #fff;
         display: block;
     }
@@ -916,30 +917,10 @@ img.banner, .banner img {
         width: 22.70833%; /* 218/960 */
         float: left;
     }
-    #home #wrapSectionPrimary .sectionA .gutter p a img {
+    #home #wrapSectionPrimary .gutter p a img {
         width: 100%; /* 218/960 */
     }
-    #home #wrapSectionPrimary .sectionA .gutter h2 a {
-        font-size: 1em;
-    }
-    #home #wrapSectionPrimary .sectionB .gutter p a img {
-        width: 100%; /* 218/960 */
-    }
-    #home #wrapSectionPrimary .sectionB .gutter h2 a {
-        font-size: 1em;
-    }
-    #home #wrapSectionPrimary .sectionC .gutter p a img {
-        width: 100%; /* 218/960 */
-    }
-    #home #wrapSectionPrimary .sectionC .gutter h2 a {
-        font-size: 1em;
-    }
-    #home #wrapSectionPrimary .sectionD .gutter p a img {
-        width: 100%; /* 218/960 */
-    }
-    #home #wrapSectionPrimary .sectionD .gutter h2 a {
-        font-size: 1em;
-    }
+
 #home #wrapSectionSecondary {
     width: 100%;
     background: url('image/layout/bg_wrapSectionSecondary.jpg');
