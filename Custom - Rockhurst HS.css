@@ -821,6 +821,7 @@ img.banner, .banner img {
     line-height: normal;
 }
 
+/* this wrapSectionPrimary sectionA - sectionC is going to be overridden by the below sections */
 #wrapSectionPrimary {
     width: 100%;
     float: left;
@@ -890,32 +891,55 @@ img.banner, .banner img {
     }
 
 #home #wrapSectionPrimary {
-    padding-left: 10px;
+    padding-left: 1.04167%; /* 10/960 */
     padding-bottom: 35px;
 }
 
     #home #wrapSectionPrimary .sectionA {
-        width: 218px;
-        margin-right: 26px;
+        width: 22.70833%; /* 218/960 */
+        margin-right: 2.70833%; /* 26/960 */
     }
 
     #home #wrapSectionPrimary .sectionB {
-        width: 218px;
-        margin-right: 26px;
+        width: 22.70833%; /* 218/960 */
+        margin-right: 2.70833%; /* 26/960 */
         float: left;
     }
 
     #home #wrapSectionPrimary .sectionC {
-        width: 218px;
-        margin-right: 26px;
+        width: 22.70833%; /* 218/960 */
+        margin-right: 2.70833%; /* 26/960 */
         float: left;
     }
 
     #home #wrapSectionPrimary .sectionD {
-        width: 218px;
+        width: 22.70833%; /* 218/960 */
         float: left;
     }
-
+    #home #wrapSectionPrimary .sectionA .gutter p a img {
+        width: 100%; /* 218/960 */
+    }
+    #home #wrapSectionPrimary .sectionA .gutter h2 a {
+        font-size: 1em;
+    }
+    #home #wrapSectionPrimary .sectionB .gutter p a img {
+        width: 100%; /* 218/960 */
+    }
+    #home #wrapSectionPrimary .sectionB .gutter h2 a {
+        font-size: 1em;
+    }
+    #home #wrapSectionPrimary .sectionC .gutter p a img {
+        width: 100%; /* 218/960 */
+    }
+    #home #wrapSectionPrimary .sectionC .gutter h2 a {
+        font-size: 1em;
+    }
+    #home #wrapSectionPrimary .sectionD .gutter p a img {
+        width: 100%; /* 218/960 */
+    }
+    #home #wrapSectionPrimary .sectionD .gutter h2 a {
+        font-size: 1em;
+    }
 #home #wrapSectionSecondary {
     width: 100%;
     background: url('image/layout/bg_wrapSectionSecondary.jpg');
@@ -2512,10 +2536,17 @@ input[type="button"].QuickSearchButton {
 /** MEDIA QUERIES OVERRIDE PREVIOUS STYLES IF THE VISITING BROWSER MATCHES THE QUERY */
 
 
-/* desktops 
+/* DESKTOP */
+/*
 @media screen and (min-width: 1024px) {
-    
-}*/
+    #wrapContent {
+        background-image: url('image/layout/bg_wrapContent.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}
+*/
 
 /* TABLETS */
 @media screen and (max-width: 768px) {
