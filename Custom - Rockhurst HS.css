@@ -146,10 +146,10 @@ h6 {
     background: url('image/layout/bg_ribbonLeft_home.png') no-repeat left top;
     text-transform: uppercase;
     font-weight: normal;
-    line-height: 42px;
-    height: 68px;
-    margin: 0 0 0 -10px;
-    text-indent: 25px;
+    line-height: 2.625em; /* 42/16 */
+    height: 68px; /* 68/16 */
+    margin: 0 0 0 -10px; /* top right bottom left */
+    text-indent: 10.96491228070175%; /* 25/228 */
     display: block;
     position: relative;
     z-index: 2;
