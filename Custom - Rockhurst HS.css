@@ -2560,6 +2560,7 @@ input[type="button"].QuickSearchButton {
         #wrapCopyright .gutter {
             padding: 0px;
         }
+
     /* slogan */
     #wrapFooterContact {
         float: none;
@@ -2572,7 +2573,11 @@ input[type="button"].QuickSearchButton {
             width: 100%;
         }
 
-    /* address & menu */
+    .respond-block {
+        display: block;
+    }
+
+    /* footer */
     #wrapFooterBottom {
         float: none;
         width: 100%;
@@ -2596,6 +2601,11 @@ input[type="button"].QuickSearchButton {
 
 /* PHONES */
 @media screen and (max-width: 480px) {
+    #wrapSectionPrimary .respond-block .sectionA { display: block; }
+    #wrapSectionPrimary .respond-block .sectionB { display: block; }
+    #wrapSectionPrimary .respond-block .sectionC { display: block; }
+    #wrapSectionPrimary .respond-block .sectionD { display: block; }
+
     #wrapFooterContact .gutter p {
         font-size: 1.213em;
     }
