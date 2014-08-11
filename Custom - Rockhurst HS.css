@@ -172,6 +172,7 @@ h6 {
         z-index: 1;
         padding: 0;
     }
+
 /* home - tabs */
 #home #wrapSectionSecondary .sectionA h3, #home #wrapSectionSecondary .sectionB h3 {
     color: #000;
@@ -823,6 +824,8 @@ img.banner, .banner img {
 }
 
 /* this wrapSectionPrimary sectionA - sectionC is going to be overridden by the below sections */
+/* maybe it is used in sub pages, so i will not remove it */
+/* update: i see it on sub pages - will address at that time */
 #wrapSectionPrimary {
     width: 100%;
     float: left;
@@ -867,6 +870,9 @@ img.banner, .banner img {
         float: left;
         clear: both;
     }
+
+
+
 /* ----------------------
   Home styles
 ------------------------ */
@@ -895,7 +901,6 @@ img.banner, .banner img {
     padding-left: 1.04167%; /* 10/960 */
     padding-bottom: 35px;
 }
-
     #home #wrapSectionPrimary .sectionA {
         width: 22.70833%; /* 218/960 */
         margin-right: 2.70833%; /* 26/960 */
@@ -2561,6 +2566,23 @@ input[type="button"].QuickSearchButton {
             padding: 0px;
         }
 
+    #home #wrapSectionPrimary .respond-block {
+        width: 100%;
+        float: none;
+        clear: none;
+        display: block;
+    }
+    /* maroon bars - Apply Now, Spiritual Resources, Rock Shop, Support RHS */
+    #home #wrapSectionPrimary .sectionA, #home #wrapSectionPrimary .sectionB, #home #wrapSectionPrimary .sectionC, #home #wrapSectionPrimary .sectionD {
+        width: 47%;
+        float: none;
+        clear: none;
+        display: inline-block;
+        margin-top:7px;
+    }
+
+
+
     /* slogan */
     #wrapFooterContact {
         float: none;
@@ -2572,10 +2594,6 @@ input[type="button"].QuickSearchButton {
             float: none;
             width: 100%;
         }
-
-    .respond-block {
-        display: block;
-    }
 
     /* footer */
     #wrapFooterBottom {
@@ -2601,10 +2619,20 @@ input[type="button"].QuickSearchButton {
 
 /* PHONES */
 @media screen and (max-width: 480px) {
-    #wrapSectionPrimary .respond-block .sectionA { display: block; }
-    #wrapSectionPrimary .respond-block .sectionB { display: block; }
-    #wrapSectionPrimary .respond-block .sectionC { display: block; }
-    #wrapSectionPrimary .respond-block .sectionD { display: block; }
+    
+    /* maroon bars - Apply Now, Spiritual Resources, Rock Shop, Support RHS */
+    #home #wrapSectionPrimary .sectionA, #home #wrapSectionPrimary .sectionB, #home #wrapSectionPrimary .sectionC, #home #wrapSectionPrimary .sectionD {
+        width: 100%;
+        float: none;
+        clear: none;
+        display: block;
+        margin-top:7px;
+    }
+    
+    .sectionA, .sectionB, .sectionC, .sectionD {
+        width: auto;
+        display: inline-block;
+    }
 
     #wrapFooterContact .gutter p {
         font-size: 1.213em;
