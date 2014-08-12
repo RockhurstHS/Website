@@ -156,7 +156,8 @@ h6 {
 }
 
     #home #wrapSectionPrimary h2 a {
-        font-size: 1em;
+        font-size: 0.875em; /* 14/16 */
+        font-weight: bold;
         color: #fff;
         display: block;
     }
