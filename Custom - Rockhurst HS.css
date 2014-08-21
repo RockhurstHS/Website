@@ -1451,11 +1451,11 @@ span.taRight {
         }
 
         .audienceNav .menu li.twitter a {
-            background: url('image/layout/icon_twitter.jpg') no-repeat left top;
+            background: url('image/layout/icon_twitter.png') no-repeat left top;
         }
 
         .audienceNav .menu li.youtube a {
-            background: url('image/layout/icon_youtube.jpg') no-repeat left top;
+            background: url('image/layout/icon_youtube.png') no-repeat left top;
         }
 
         .audienceNav .menu li.facebook ul, .audienceNav .menu li.twitter ul, .audienceNav .menu li.youtube ul {
