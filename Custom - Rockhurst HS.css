@@ -1447,15 +1447,18 @@ span.taRight {
             }
 
         .audienceNav .menu li.facebook a {
-            background: url('image/icons/icon-facebook.png') no-repeat left top;
+            background: url('image/layout/icon_facebook.png') no-repeat left top;
+            background-size: 39px 38px;
         }
 
         .audienceNav .menu li.twitter a {
             background: url('image/layout/icon_twitter.png') no-repeat left top;
+            background-size: 39px 38px;
         }
 
         .audienceNav .menu li.youtube a {
             background: url('image/layout/icon_youtube.png') no-repeat left top;
+            background-size: 39px 38px;
         }
 
         .audienceNav .menu li.facebook ul, .audienceNav .menu li.twitter ul, .audienceNav .menu li.youtube ul {
@@ -2511,7 +2514,7 @@ input[type="button"].QuickSearchButton {
     padding: 0;
 }
 
-#educatingYoungMenSince1910 {
+#footerPhrase {
     display: inline;
 }
 
