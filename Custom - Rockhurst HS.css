@@ -973,13 +973,13 @@ img.banner, .banner img {
 .slideshow {
     position: relative;
     width: 100%; /* 100% or 960/1440 */
-    height: 37.5%; /* 360/960 */
+    /* height: 37.5%; /* 360/960 */
 }
 
 .slides {
     position: relative;
     z-index: 0;
-    height: 37.5%; /* 360/960 */
+    /* height: 37.5%; /* 360/960 */
 }
 
 .item {
@@ -1004,7 +1004,7 @@ img.banner, .banner img {
 /* navigation (forward/backward arrows) */
 .slideshow .slideshownav {
     display: none;
-    top: 50%;
+    /* top: 50%; */
     width: 100%;
     opacity: 0;
     -webkit-transition: all linear .5s;
