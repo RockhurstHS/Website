@@ -1083,7 +1083,7 @@ img.banner, .banner img {
 		top: 0;
     width: 47.395833333333%; /* 455/960 */
     height: inherited; /* 13.020833333333%; /* 125/960 */
-    padding: 14.479166666667% 1.041666666667% 0% 50.520833333333%; /* 235/960 10/960 0 485/960 */ /* or rather - 235/360 10/960 0 485/960 */ 
+    padding: 24.479166666667% 1.041666666667% 0% 50.520833333333%; /* 235/960 10/960 0 485/960 */ /* or rather - 235/360 10/960 0 485/960 */ 
     background: url('image/layout/bg_slideshowContent.png') no-repeat left top;
 }
 
@@ -1092,11 +1092,11 @@ img.banner, .banner img {
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 1.875em; /* 30p/16p */
     font-weight: normal;
-    line-height: 34px;
+    /*line-height: 34px; */
     margin: 0 0 10px 0;
     display: block;
     overflow: hidden;
-    height: 3.541666666667%; /* 34/960 */
+    /*height: 3.541666666667%; /* 34/960 */
 }
 
     .slideshow h3 a {
