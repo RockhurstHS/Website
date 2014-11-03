@@ -58,7 +58,10 @@ var _currentHref = window.location.href; //url of current page
         var tab = options.tabs;
         var prev = options.prev;
         var next = options.next;
-        var selector = $(this).selector; //in example $('div') div is the value of .selector
+
+        //in example $('div') div is the value of .selector
+        var selector = $(this).selector; //in this case, the value is .slide
+
         var getPane = selector.split(' ');
         var pane = getPane[getPane.length - 1].replace('.', '');
         var tallest = 0;
@@ -100,15 +103,23 @@ var _currentHref = window.location.href; //url of current page
             }
         });
 
-
+       
+        //convert the tables like <table class="slide"> to divs
         $(selector + '.first').each(function (i) {
+            //console.log('i = ' + i); //0
+            //console.log('pane = ' + pane); //slide
+            //console.log('display = ' + display); //slideshow
             i = i + 1;
             $(this).addClass(pane + '-set-' + i);
+            //nextAll = Get all following siblings of each element in the set of matched elements, optionally filtered by a selector.
+            //wrapAll = Wrap an HTML structure around all elements in the set of matched elements.
+            //so, this loop finds the one .slide.first selector, then it finds all its siblings and modifies accordingly
             $(this).nextAll(selector).addClass(pane + '-set-' + i);
-            $('.' + pane + '-set-' + i).wrapAll('<div class="' + pane + 'Set ' + display + '"/>');
+            $('.' + pane + '-set-' + i).wrapAll('<div class="' + pane + 'Set ' + display + '"/>'); //slideSet slideshow
         });
 
-        // $('.'+pane+'Nav').each(function(){$(this).remove();});
+        // I didn't uncomment these
+        // $('.'+pane+'Nav').each(function(){$(this).remove();}); 
         // $('.'+pane+'s').each(function(){$(this).remove();});
 
 
