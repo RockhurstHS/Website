@@ -122,20 +122,23 @@ var _currentHref = window.location.href; //url of current page
         // $('.'+pane+'Nav').each(function(){$(this).remove();}); 
         // $('.'+pane+'s').each(function(){$(this).remove();});
 
+        //foreach slideSet class (there is only one)
+        $('.' + pane + 'Set').each(function (i, e) { //(this) = slideSet
+            var thisSet = e; //[object HTMLDivElement]"
+            var thisID = i; //0
+            //console.log('e = ' + e); 
+            //console.log('i = ' + i); 
+            $(this).attr('id', display + thisID); //adds id="slideshow0" as attribute
 
-        $('.' + pane + 'Set').each(function (i, e) {
-            var thisSet = e;
-            var thisID = i;
-            $(this).attr('id', display + thisID);
-
-            if (tabPosition == 'bottom') {
+            if (tabPosition == 'bottom') { //true
+                //prepend = insert as first child of matching element
                 $(this).prepend('<div class="' + pane + 's" /><div class="' + pane + 'Nav" />');
             } else {
                 $(this).prepend('<div class="' + pane + 'Nav" /><div class="' + pane + 's" />');
             }
-
+            //$(.slideNav, #tabs0) where append = add to last child
             $('.' + pane + 'Nav', '#' + display + thisID).append('<span class="navItems" />');
-
+            //$(#tabs0 .slide)
             $('#' + display + thisID + ' .' + pane).each(function (i) {
                 i = i + 1;
                 var specialClass = $(this).attr('class').replace(pane, '');
