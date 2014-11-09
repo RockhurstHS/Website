@@ -138,16 +138,22 @@ var _currentHref = window.location.href; //url of current page
             }
             //$(.slideNav, #tabs0) where append = add to last child
             $('.' + pane + 'Nav', '#' + display + thisID).append('<span class="navItems" />');
-            //$(#tabs0 .slide)
-            $('#' + display + thisID + ' .' + pane).each(function (i) {
+            //$(#tabs0 .slide), loops 4 times
+            $('#' + display + thisID + ' .' + pane).each(function (i) {//not sure where i gets its initial value of 0
                 i = i + 1;
                 var specialClass = $(this).attr('class').replace(pane, '');
+                //console.log('i = ' + i); //i=0, i=1, i=2, i=3
+                //console.log('specialClass = ' + specialClass);
+                //specialClass =  first slide-set-1 //first time only
+                //specialClass =  slide-set-1 //repeats 3 times
+
                 if (isEditView) {
                     var thisPane = $('.ogPane', this);
                 } else {
                     var thisPane = $(this);
                 }
-
+                
+                //'browse' = tab = options.tabs
                 if (tab == 'thumb') {
                     var tabImg = $('img:first', thisPane).attr('src');
                     var tabContent = '<img src="' + tabImg + '"/>';
@@ -159,13 +165,17 @@ var _currentHref = window.location.href; //url of current page
                     var tabContent = '';
                 } else if ($('.' + tab, thisPane).length > 0) {
                     var tabContent = $('.' + tab, thisPane).html();
-                } else {
+                } else { //'browse' lands here
                     var tabContent = i;
+                    //console.log('tabContent = ' + tabContent);//tabContent = 1, 2, 3, 4
                 }
 
                 if ((isEditView) && (display == 'slider')) {
                     $(this).appendTo('.' + pane + 's', '#' + display + thisID).wrap('<div class="item item-' + i + ' ' + specialClass + '"><div class="gutter"/></div>');
                 } else {
+                    //$(#tabs0 .slides) <-- this is nearly the same as the selector, but slides has that 's' at the end
+                    //.slides class wraps the 4 slide divs
+                    //this append inserts 1 slide, so however many iterations are encountered in the loop
                     $('#' + display + thisID + ' .' + pane + 's').append('<div class="item item-' + i + ' ' + specialClass + '"><div class="gutter"/></div>');
                 }
 
