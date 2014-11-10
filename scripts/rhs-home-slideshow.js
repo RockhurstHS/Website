@@ -66,7 +66,7 @@ var _currentHref = window.location.href; //url of current page
         var pane = getPane[getPane.length - 1].replace('.', '');
         var tallest = 0;
         var widest = 0;
-        var display = options.display;
+        var display = options.display; // = slideshow
         var tabParams = options.tabParams;
         var slideshowParams = options.slideshowParams;
         var tabPosition = options.tabPosition;
@@ -138,6 +138,8 @@ var _currentHref = window.location.href; //url of current page
             }
             //$(.slideNav, #tabs0) where append = add to last child
             $('.' + pane + 'Nav', '#' + display + thisID).append('<span class="navItems" />');
+
+            /** THIS IS WHERE THE SOURCE TABLE IS REMOVED AND REPLACED WITH DIV FORMATTED SLIDESHOW */
             //$(#tabs0 .slide), loops 4 times
             $('#' + display + thisID + ' .' + pane).each(function (i) {//not sure where i gets its initial value of 0
                 i = i + 1;
@@ -150,7 +152,7 @@ var _currentHref = window.location.href; //url of current page
                 if (isEditView) {
                     var thisPane = $('.ogPane', this);
                 } else {
-                    var thisPane = $(this);
+                    var thisPane = $(this); //$(#tabs0 .slide) , in this case found in the original source as <table class="slide">
                 }
                 
                 //'browse' = tab = options.tabs
@@ -179,8 +181,10 @@ var _currentHref = window.location.href; //url of current page
                     $('#' + display + thisID + ' .' + pane + 's').append('<div class="item item-' + i + ' ' + specialClass + '"><div class="gutter"/></div>');
                 }
 
+                //replace table structure with div structure
                 if (($(thisPane).children('tr').length > 0) || ($(thisPane).children('tbody').length > 0)) {
-                    $('td', thisPane).not('td td', thisPane).each(function () {
+                    //not = Remove elements from the set of matched elements :: select a group, then use not function to further select items to remove from it
+                    $('td', thisPane).not('td td', thisPane).each(function () {//td td means td inside td like <td><td> - not sure why cell would be inside cell like this
                         var tdClass = $(this).attr('class');
                         var tdHTML = $(this).html();
                         if ((tdHTML != '') || (tdHTML != '&nbsp;')) {
@@ -195,21 +199,23 @@ var _currentHref = window.location.href; //url of current page
                     });
                 };
 
-                $(thisPane).remove();
+                $(thisPane).remove(); //remove the table markup
 
-                if (tab == 'mini') {
+                //again, 'browse' = tab = options.tabs
+                if (tab == 'mini') { //no
                     var buildTab = '<div class="' + tab + '">' + tabContent + '</div>';
-                } else {
+                } else { //yes
                     var buildTab = '<a class="' + tab + '">' + tabContent + '</a>';
                 }
 
+                //true in our case, b/c display = 'slideshow'
                 if (display != 'slider') {
-                    if (isEditView && (display == 'tabs')) {
+                    if (isEditView && (display == 'tabs')) { //no
                         $(this).appendTo('#' + display + thisID + ' .navItems').append(tabContent).wrap('<a class="' + tab + '"/>');
                         //  	  $(this).appendTo('.navItems','#'+display+thisID).append(tabContent).wrap('<a href="#" class="'+tab+'"/>');
-                    } else if (isEditView && (display != 'tabs')) {
+                    } else if (isEditView && (display != 'tabs')) { //no
                         $(this).appendTo('#' + display + thisID + ' .navItems').append(tabContent).wrap('<a class="' + tab + '"/>');
-                    } else {
+                    } else { //yes
                         $('#' + display + thisID + ' .navItems').append(buildTab);
                     }
                 };
