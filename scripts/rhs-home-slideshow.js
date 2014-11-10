@@ -7,6 +7,7 @@
 /***** change log *****
 
 11/03/11 - IMPORTANT - tab element is now <div> instead of <a>
+11/10/14 - added many comments specific to Rockhurst High School implementation of this script
 
 ***********************/
 
@@ -209,7 +210,7 @@ var _currentHref = window.location.href; //url of current page
                 }
 
                 //true in our case, b/c display = 'slideshow'
-                if (display != 'slider') {
+                if (display != 'slider') { //yes
                     if (isEditView && (display == 'tabs')) { //no
                         $(this).appendTo('#' + display + thisID + ' .navItems').append(tabContent).wrap('<a class="' + tab + '"/>');
                         //  	  $(this).appendTo('.navItems','#'+display+thisID).append(tabContent).wrap('<a href="#" class="'+tab+'"/>');
@@ -219,15 +220,18 @@ var _currentHref = window.location.href; //url of current page
                         $('#' + display + thisID + ' .navItems').append(buildTab);
                     }
                 };
-
-                $('img[id$=imgPartGlyph]', '#' + display + thisID).css('width', 'auto').css('min-width', 'inherit');
-
+                //jquery selectors api - http://api.jquery.com/category/selectors/ 
+                //select img with id attribute imgPartGlyph like <img id="imgPartGlyph" src="" />
+                //however, it's not found in page source or page inspection by element therefore comment out
+                //$('img[id$=imgPartGlyph]', '#' + display + thisID).css('width', 'auto').css('min-width', 'inherit');
             });
+            //:eq = Select the element at index n within the matched set.
+            //this is a technique to apply what's called a clearfix to the last of the nav item children (see zero height container problem)
             $('.navItems:eq(' + thisID + ')').append('<div style="clear:both;font-size:0;line-height:0"/>');
 
+            //now attempting to force container dimensions
             var tallest = 0;
             var widest = 0;
-
             $('.item', this).each(function () {
 
                 $('img', this).each(function () {
@@ -285,7 +289,9 @@ var _currentHref = window.location.href; //url of current page
 
             };
 
-            if ((display == 'slider') || (display == 'album')) {
+
+            //display = 'slideshow' , so skip this
+            if ((display == 'slider') || (display == 'album')) { //no
 
                 if (display == 'album') {
                     var tabSelector = '.' + tab;
