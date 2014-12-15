@@ -15,6 +15,8 @@
 1. add vertical scrolling option for auto qty
 */
 
+/**/
+
 var isEditView = window.location.href.match('edit=');
 var _protocol = window.location.protocol; //http: https: etc...
 var _currentHref = window.location.href; //url of current page
