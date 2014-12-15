@@ -15,7 +15,38 @@
 1. add vertical scrolling option for auto qty
 */
 
-/**/
+function ssresize(pane, display, thisID, obj) {
+    /** THIS IS WHERE THE RESIZE HAPPENS */
+    //now attempting to force container dimensions
+
+    var ss = $(obj);
+    var tallest = 0;
+    var widest = 0;
+    $('.item', ss).each(function () {
+
+        $('img', ss).each(function () {
+            if ($(ss).outerWidth(true) < $(ss).outerHeight(true)) {
+                $(ss).parents('.item').addClass('tall');
+            }
+        });
+
+        if ($(ss).outerHeight(true) > tallest) {
+            tallest = $(ss).outerHeight(true);
+            //if (display == 'tabs') { tallest = tallest+24 }
+            $('.' + pane + 's', '#' + display + thisID).height(tallest);
+        };
+
+        if ($(ss).outerWidth(true) > widest) {
+            widest = $(ss).outerWidth(true);
+        };
+
+        if (display != 'slider') {
+            $(ss).width(widest).css('position', 'absolute').hide();
+        } else {
+            $(ss).width(widest);
+        }
+    });
+}
 
 var isEditView = window.location.href.match('edit=');
 var _protocol = window.location.protocol; //http: https: etc...
@@ -231,33 +262,7 @@ var _currentHref = window.location.href; //url of current page
             //this is a technique to apply what's called a clearfix to the last of the nav item children (see zero height container problem)
             $('.navItems:eq(' + thisID + ')').append('<div style="clear:both;font-size:0;line-height:0"/>');
 
-            //now attempting to force container dimensions
-            var tallest = 0;
-            var widest = 0;
-            $('.item', this).each(function () {
-
-                $('img', this).each(function () {
-                    if ($(this).outerWidth(true) < $(this).outerHeight(true)) {
-                        $(this).parents('.item').addClass('tall');
-                    }
-                });
-
-                if ($(this).outerHeight(true) > tallest) {
-                    tallest = $(this).outerHeight(true);
-                    //if (display == 'tabs') { tallest = tallest+24 }
-                    $('.' + pane + 's', '#' + display + thisID).height(tallest);
-                };
-
-                if ($(this).outerWidth(true) > widest) {
-                    widest = $(this).outerWidth(true);
-                };
-
-                if (display != 'slider') {
-                    $(this).width(widest).css('position', 'absolute').hide();
-                } else {
-                    $(this).width(widest);
-                }
-            });
+            ssresize(this);
 
             // get number of items and generate random number
             var length = $(".item", '#' + display + thisID).length;
