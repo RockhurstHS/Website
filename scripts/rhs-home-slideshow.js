@@ -8,45 +8,13 @@
 
 11/03/11 - IMPORTANT - tab element is now <div> instead of <a>
 11/10/14 - added many comments specific to Rockhurst High School implementation of this script
+12/17/14 - deleted some code blocks we aren't using and those which are setting static dimensions on slideshow elements
 
 ***********************/
 
 /* TO DO
 1. add vertical scrolling option for auto qty
 */
-
-function ssresize(pane, display, thisID, obj) {
-    /** THIS IS WHERE THE RESIZE HAPPENS */
-    //now attempting to force container dimensions
-
-    var ss = $(obj);
-    var tallest = 0;
-    var widest = 0;
-    $('.item', ss).each(function () {
-
-        $('img', ss).each(function () {
-            if ($(ss).outerWidth(true) < $(ss).outerHeight(true)) {
-                $(ss).parents('.item').addClass('tall');
-            }
-        });
-
-        if ($(ss).outerHeight(true) > tallest) {
-            tallest = $(ss).outerHeight(true);
-            //if (display == 'tabs') { tallest = tallest+24 }
-            $('.' + pane + 's', '#' + display + thisID).height(tallest);
-        };
-
-        if ($(ss).outerWidth(true) > widest) {
-            widest = $(ss).outerWidth(true);
-        };
-
-        if (display != 'slider') {
-            $(ss).width(widest).css('position', 'absolute').hide();
-        } else {
-            $(ss).width(widest);
-        }
-    });
-}
 
 var isEditView = window.location.href.match('edit=');
 var _protocol = window.location.protocol; //http: https: etc...
@@ -59,6 +27,26 @@ var _currentHref = window.location.href; //url of current page
     //a jquery extension
     $.fn.SlideSet = function (options) {
         //function call and provided options @ https://www.rockhursths.edu/document.doc?id=7
+        //this overrides below defaults:
+        /*
+    		$('.slide').SlideSet({
+				 display: 'slideshow',
+				 tabs: 'browse',
+				 prev: '&laquo;',
+				 next: '&raquo;',
+				 tabParams: {
+				  effect: "fade",
+				  fadeOutSpeed: "slow",
+				  rotate: true
+				 },
+				 slideshowParams: {
+				  autoplay: true
+				 },
+				 tabPosition: 'bottom',
+				 tabNavPos: 'none',
+				 tabQty: 'auto'
+			});			
+        */
         var defaults = {
             tabs: 'none',   // 'thumb' uses image; 'tab' uses text; 'browse' uses left and right arrows; 'none' does not build tabs
             prev: '&laquo;', // text for 'previous' button
@@ -137,7 +125,7 @@ var _currentHref = window.location.href; //url of current page
             }
         });
 
-       
+
         //convert the tables like <table class="slide"> to divs
         $(selector + '.first').each(function (i) {
             //console.log('i = ' + i); //0
@@ -188,7 +176,7 @@ var _currentHref = window.location.href; //url of current page
                 } else {
                     var thisPane = $(this); //$(#tabs0 .slide) , in this case found in the original source as <table class="slide">
                 }
-                
+
                 //'browse' = tab = options.tabs
                 if (tab == 'thumb') {
                     var tabImg = $('img:first', thisPane).attr('src');
@@ -262,7 +250,35 @@ var _currentHref = window.location.href; //url of current page
             //this is a technique to apply what's called a clearfix to the last of the nav item children (see zero height container problem)
             $('.navItems:eq(' + thisID + ')').append('<div style="clear:both;font-size:0;line-height:0"/>');
 
-            ssresize(this);
+            //now attempting to force container dimensions
+            /*
+            var tallest = 0;
+            var widest = 0;
+            $('.item', this).each(function () {
+
+                $('img', this).each(function () {
+                    if ($(this).outerWidth(true) < $(this).outerHeight(true)) {
+                        $(this).parents('.item').addClass('tall');
+                    }
+                });
+
+                if ($(this).outerHeight(true) > tallest) {
+                    tallest = $(this).outerHeight(true);
+                    //if (display == 'tabs') { tallest = tallest+24 }
+                    $('.' + pane + 's', '#' + display + thisID).height(tallest);
+                };
+
+                if ($(this).outerWidth(true) > widest) {
+                    widest = $(this).outerWidth(true);
+                };
+
+                if (display != 'slider') {
+                    $(this).width(widest).css('position', 'absolute').hide();
+                } else {
+                    $(this).width(widest);
+                }
+            });
+            */
 
             // get number of items and generate random number
             var length = $(".item", '#' + display + thisID).length;
@@ -295,109 +311,6 @@ var _currentHref = window.location.href; //url of current page
                 }
 
             };
-
-
-            //display = 'slideshow' , so skip this
-            if ((display == 'slider') || (display == 'album')) { //no
-
-                if (display == 'album') {
-                    var tabSelector = '.' + tab;
-                } else if (display == 'slider') {
-                    var tabSelector = '.item';
-                }
-
-                var selContainer = $('#' + display + thisID + ' ' + tabSelector).parent();
-                selContainer.before('<div class="pageSet"/>');
-                var pageSet = selContainer.prev('.pageSet');
-                pageSet.append('<a class="prev browse left">' + prev + '</a><div class="wrapItems"><div class="items"/></div><a class="next browse right">' + next + '</a><div style="clear:both;font-size:0;line-height:0"/>');
-
-                if (nav == 'top') {
-                    pageSet.prepend('<div class="navi"/>');
-                } else if (nav == 'bottom') {
-                    pageSet.append('<div class="navi"/>');
-                }
-
-                var selWidth = parseInt($(tabSelector, '#' + display + thisID).css('width'));
-                var selOutWidth = $(tabSelector, '#' + display + thisID).outerWidth(true);
-                if (display == 'slider') {
-                    var selOutHeight = tallest;
-                } else {
-                    var selOutHeight = $(tabSelector, '#' + display + thisID).outerHeight(true);
-                }
-                var selMargin = parseInt((selOutWidth - selWidth));
-                var conWidth = $('.wrapItems', '#' + display + thisID).width();
-                var selAmt = $(tabSelector, '#' + display + thisID).length;
-
-                if (num == 'auto') {
-                    var qty = Math.floor(conWidth / selOutWidth);
-                } else {
-                    var qty = num;
-                }
-
-                while ($(tabSelector, selContainer).length) {
-                    var itemsContainer = $('#' + display + thisID + ' .items');
-                    var newContainer = $('<div class="set"/>')
-                       .appendTo(itemsContainer);
-
-                    $(tabSelector + ':lt(' + qty + ')', selContainer).appendTo(newContainer);
-                }
-
-                $('.set', pageSet).each(function (i) {
-                    $(this).addClass('#' + i);
-                });
-
-                selContainer.remove();
-
-                $('.set', pageSet)
-                 .css('width', selOutWidth * qty)
-                 .css('height', selOutHeight)
-                 .css('padding', selMargin / 2);
-
-                $('.browse', pageSet)
-                 .css('height', selOutHeight + selMargin)
-                 .css('line-height', selOutHeight + selMargin + 'px');
-                //	 .css('margin',selMargin/2+'px 0px');
-
-                if ($('.set', '#' + display + thisID).length < 2) {
-                    $('.browse', '#' + display + thisID).css('visibility', 'hidden').addClass('disabled');
-                    $('.navi', '#' + display + thisID).hide();
-                }
-
-                $('.wrapItems', pageSet)
-                 .css('width', selOutWidth * qty + selMargin)
-                 .css('height', selOutHeight + selMargin);
-
-                $('.items', pageSet)
-                 .css('width', (selOutWidth * selAmt) * 2);
-
-                var scroller = $('.wrapItems', pageSet);
-                scroller.scrollable(scrollParams);
-                if (autoplay == true) {
-                    scroller.autoscroll(autoScroll);
-                }
-                if ($('.navi').length > 0) {
-                    scroller.navigator();
-                }
-
-                if (display == 'album') {
-                    var tabsAPI = $('div.' + pane + 'Nav', '#' + display + thisID).data('tabs');
-                    var scrollAPI = $('.wrapItems', '#' + display + thisID).data('scrollable');
-
-                    tabsAPI.onClick(function () {
-                        var slideIdx = this.getIndex();
-                        var currScroll = $(tabSelector, '#' + display + thisID).eq(slideIdx).parent();
-                        scrollAPI.seekTo(currScroll, 'fast');
-                    });
-
-
-                }
-
-                if (display == 'slider') {
-                    var scrollAPI = $('.wrapItems', '#' + display + thisID).data('scrollable');
-                    scrollAPI.seekTo(start, 'fast');
-                }
-
-            }
 
             if (typeof end_SlideSet == 'function') {
                 end_SlideSet(tabSelector);

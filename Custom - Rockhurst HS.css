@@ -1082,7 +1082,7 @@ img.banner, .banner img {
     left: 0;
 		top: 0;
     width: 47.395833333333%; /* 455/960 */
-    height: inherited; /* 13.020833333333%; /* 125/960 */
+    /*height: 13.020833333333%; /* 125/960 */
     padding: 24.479166666667% 1.041666666667% 0% 50.520833333333%; /* 235/960 10/960 0 485/960 */ /* or rather - 235/360 10/960 0 485/960 */ 
     background: url('image/layout/bg_slideshowContent.png') no-repeat left top;
 }
@@ -2620,6 +2620,10 @@ input[type="button"].QuickSearchButton {
             float: none;
             text-align: center;
         }
+        .slideshow .content {
+            width: 100%;
+            background: none;
+        }
 }
 
 /* PHONES */
@@ -2642,4 +2646,9 @@ input[type="button"].QuickSearchButton {
     #wrapFooterContact .gutter p {
         font-size: 1.213em;
     }
+    .slideshow .content {
+        width: 100%;
+        background: none;
+    }
+
 }
