@@ -28,25 +28,23 @@ var _currentHref = window.location.href; //url of current page
     $.fn.SlideSet = function (options) {
         //function call and provided options @ https://www.rockhursths.edu/document.doc?id=7
         //this overrides below defaults:
-        /*
-    		$('.slide').SlideSet({
-				 display: 'slideshow',
-				 tabs: 'browse',
-				 prev: '&laquo;',
-				 next: '&raquo;',
-				 tabParams: {
-				  effect: "fade",
-				  fadeOutSpeed: "slow",
-				  rotate: true
-				 },
-				 slideshowParams: {
-				  autoplay: true
-				 },
-				 tabPosition: 'bottom',
-				 tabNavPos: 'none',
-				 tabQty: 'auto'
-			});			
-        */
+        var options = {
+            display: 'slideshow',
+            tabs: 'browse',
+            prev: '&laquo;',
+            next: '&raquo;',
+            tabParams: {
+                effect: "fade",
+                fadeOutSpeed: "slow",
+                rotate: true
+            },
+            slideshowParams: {
+                autoplay: true
+            },
+            tabPosition: 'bottom',
+            tabNavPos: 'none',
+            tabQty: 'auto'
+        };
         var defaults = {
             tabs: 'none',   // 'thumb' uses image; 'tab' uses text; 'browse' uses left and right arrows; 'none' does not build tabs
             prev: '&laquo;', // text for 'previous' button
