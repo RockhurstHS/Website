@@ -251,11 +251,14 @@ var _currentHref = window.location.href; //url of current page
             $('.navItems:eq(' + thisID + ')').append('<div style="clear:both;font-size:0;line-height:0"/>');
 
             //now attempting to force container dimensions
-            /*
+            
+
             var tallest = 0;
             var widest = 0;
             $('.item', this).each(function () {
 
+                
+                //if taller, not wider (always false in our case)
                 $('img', this).each(function () {
                     if ($(this).outerWidth(true) < $(this).outerHeight(true)) {
                         $(this).parents('.item').addClass('tall');
@@ -264,13 +267,13 @@ var _currentHref = window.location.href; //url of current page
 
                 if ($(this).outerHeight(true) > tallest) {
                     tallest = $(this).outerHeight(true);
-                    //if (display == 'tabs') { tallest = tallest+24 }
+                    if (display == 'tabs') { tallest = tallest+24 }
                     $('.' + pane + 's', '#' + display + thisID).height(tallest);
-                };
+                }
 
                 if ($(this).outerWidth(true) > widest) {
                     widest = $(this).outerWidth(true);
-                };
+                }
 
                 if (display != 'slider') {
                     $(this).width(widest).css('position', 'absolute').hide();
@@ -278,7 +281,8 @@ var _currentHref = window.location.href; //url of current page
                     $(this).width(widest);
                 }
             });
-            */
+
+
 
             // get number of items and generate random number
             var length = $(".item", '#' + display + thisID).length;

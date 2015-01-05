@@ -661,13 +661,21 @@ body {
     }
 /* main nav  */
 #wrapNav {
-    clear: both;
-    background: url('image/layout/bg_wrapNav.jpg') repeat-x 50% top;
-    height: 50px;
+    /* clear: both; */
+    /* background: url('image/layout/bg_wrapNav.jpg') repeat-x 50% top; */
+    /* height: 50px; */
     float: left;
     border-bottom: 1px solid #fff;
     position: relative;
     z-index: 100;
+    background: rgb(38,90,176); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(38,90,176,1) 0%, rgba(38,90,176,1) 49%, rgba(1,60,162,1) 51%, rgba(1,60,162,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(38,90,176,1)), color-stop(49%,rgba(38,90,176,1)), color-stop(51%,rgba(1,60,162,1)), color-stop(100%,rgba(1,60,162,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(38,90,176,1) 0%,rgba(38,90,176,1) 49%,rgba(1,60,162,1) 51%,rgba(1,60,162,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(38,90,176,1) 0%,rgba(38,90,176,1) 49%,rgba(1,60,162,1) 51%,rgba(1,60,162,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(38,90,176,1) 0%,rgba(38,90,176,1) 49%,rgba(1,60,162,1) 51%,rgba(1,60,162,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(38,90,176,1) 0%,rgba(38,90,176,1) 49%,rgba(1,60,162,1) 51%,rgba(1,60,162,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#265ab0', endColorstr='#013ca2',GradientType=0 ); /* IE6-9 */
 }
 
     #wrapNav .gutter {
@@ -1479,11 +1487,11 @@ span.taRight {
         top: 50px;
         margin: 0;
         padding: 0;
-        width: 200px;
+        width: 20.833333333333333333333333333333%; /* 200/960 */
     }
 
     #wrapNav .menu li {
-        display: block;
+        display: inline;
         float: left;
         padding: 0;
         position: relative;
