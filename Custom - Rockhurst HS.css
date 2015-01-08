@@ -2663,19 +2663,13 @@ input[type="button"].QuickSearchButton {
 /* weekly news & daily events are at full static width */
 @media screen and (max-width: 745px) {
 
-	#home #wrapSectionSecondary .sectionA {
-		width: 37.1875%; /* 357/960 */
+	#home #wrapSectionSecondary .sectionA, #home #wrapSectionSecondary .sectionB {
+		width: 49%; /* 357/960 */
 	}
 
 		#home #wrapSectionSecondary .sectionA .gutter {
 			padding: 23.75%; /* 228/960 */
 		}
-
-	#home #wrapSectionSecondary .sectionB {
-		width: 38.229166666666666666666666666667%; /* 367/960 */
-	}
-
-
 }
 
 /* the black bar collides left again */
