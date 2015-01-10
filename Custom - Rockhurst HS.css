@@ -2539,9 +2539,6 @@ input[type="button"].QuickSearchButton {
 	display: inline;
 }
 
-#socialMediaButtons {
-	display: inline;
-}
 
 
 /** MEDIA QUERIES OVERRIDE PREVIOUS STYLES IF THE VISITING BROWSER MATCHES THE QUERY */
@@ -2576,6 +2573,7 @@ input[type="button"].QuickSearchButton {
 	#wrapContent {
 		background-image: none;
 	}
+
 	/* logo */
 	#wrapCopyright {
 		float: none;
@@ -2606,8 +2604,6 @@ input[type="button"].QuickSearchButton {
 		display: inline-block;
 		margin-top:7px;
 	}
-
-
 
 	/* slogan */
 	#wrapFooterContact {
@@ -2645,17 +2641,22 @@ input[type="button"].QuickSearchButton {
 			width: 100%;
 			background: none;
 		}
-	.rhs-respond-table {
-		display: table;
-		width: 100%;
+
+	#socialMediaButtons {
+		text-align: center;
 	}
-	.rhs-respond-table-header {
-		display: table-header-group;
-	}
-	.rhs-respond-table-footer {
-		display: table-footer-group;
-	}
+
+		#socialMediaButtons .menu {
+			display: inline-block;
+			float: none;
+		}
 }
+
+/* the blue event highlights rise over daily events */
+@media screen and (max-width: 630px) {
+	
+}
+
 /* the search bar and black bar collide left */
 @media screen and (max-width: 540px) {
 	#search {
