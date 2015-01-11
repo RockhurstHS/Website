@@ -139,6 +139,7 @@ h6 {
 	text-align: left;
 	text-style: italic;
 }
+
 /* home - 25% callout buttons */
 #home #wrapSectionPrimary h2 {
 	color: #fff;
@@ -2543,7 +2544,7 @@ input[type="button"].QuickSearchButton {
 
 /** MEDIA QUERIES OVERRIDE PREVIOUS STYLES IF THE VISITING BROWSER MATCHES THE QUERY */
 
-/* blue ribbons collapse under weekly news */
+/* weekly news moves under daily events */
 @media screen and (max-width: 971px) {
 	#home #wrapSectionSecondary .sectionA {
 		width: 100%;
@@ -2552,9 +2553,6 @@ input[type="button"].QuickSearchButton {
 		width: 100%;
 		margin-right: -228px;
 		float: left;
-	}
-	#home #wrapSectionSecondary .sectionC {
-		
 	}
 	#home #wrapSectionSecondary .rhs-respond-table {
 		display: table;
@@ -2586,16 +2584,6 @@ input[type="button"].QuickSearchButton {
 			padding: 0px;
 		}
 
-	#home #wrapSectionPrimary .respond-block {
-		width: 100%;
-		float: none;
-		clear: none;
-		display: block;
-		/**/text-align: center;
-	}
-	#home #wrapSectionPrimary .respond-block h2 {
-		background-size: 100%;
-	}
 	/* maroon bars - Apply Now, Spiritual Resources, Rock Shop, Support RHS */
 	#home #wrapSectionPrimary .sectionA, #home #wrapSectionPrimary .sectionB, #home #wrapSectionPrimary .sectionC, #home #wrapSectionPrimary .sectionD {
 		/**/width: 40%;
@@ -2654,15 +2642,48 @@ input[type="button"].QuickSearchButton {
 
 /* the blue event highlights rise over daily events */
 @media screen and (max-width: 630px) {
-	
+
+	#home #wrapSectionSecondary .sectionB {
+		width: 100%;
+	}
+	#home #wrapSectionSecondary .sectionC {
+		display: none;
+	}
+	#home-alert-box .sectionC {
+		width: 100%;
+	}
+
+	#home-alert-box .sectionC .gutter h4 {
+		text-transform: uppercase;
+		font-weight: normal;
+		line-height: 48px;
+		height: 50px;
+		margin-bottom: 7px;
+		text-indent: 20px;
+		display: block;
+		position: relative;
+		left: 10px;
+
+		background: rgba(41,126,159,1);
+		background: -moz-linear-gradient(left, rgba(41,126,159,1) 0%, rgba(41,126,159,1) 17px, rgba(45,84,138,1) 17px, rgba(45,84,138,1) 100%);
+		background: -webkit-gradient(left top, right top, color-stop(0%, rgba(41,126,159,1)), color-stop(17px, rgba(41,126,159,1)), color-stop(17px, rgba(45,84,138,1)), color-stop(100%, rgba(45,84,138,1)));
+		background: -webkit-linear-gradient(left, rgba(41,126,159,1) 0%, rgba(41,126,159,1) 17px, rgba(45,84,138,1) 17px, rgba(45,84,138,1) 100%);
+		background: -o-linear-gradient(left, rgba(41,126,159,1) 0%, rgba(41,126,159,1) 17px, rgba(45,84,138,1) 17px, rgba(45,84,138,1) 100%);
+		background: -ms-linear-gradient(left, rgba(41,126,159,1) 0%, rgba(41,126,159,1) 17px, rgba(45,84,138,1) 17px, rgba(45,84,138,1) 100%);
+		background: linear-gradient(to right, rgba(41,126,159,1) 0%, rgba(41,126,159,1) 17px, rgba(45,84,138,1) 17px, rgba(45,84,138,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#297e9f', endColorstr='#2d548a', GradientType=1 );
+	}
+	#home-alert-box .sectionC .gutter h4 a {
+		color: #fff;
+		text-decoration: none;
+	}
 }
 
 /* the search bar and black bar collide left */
 @media screen and (max-width: 540px) {
 	#search {
 		width: 100%; /* 175p/960p */
-		float: none;
-		clear: none;
+		/**/clear: none;
 		padding: 0 0 0.13888889% 0.41666667%; /* 5/36 15/36 */
 	}
 	*.QuickSearchFormTable {
