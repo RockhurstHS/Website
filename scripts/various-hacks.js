@@ -1,11 +1,15 @@
 ﻿$(document).ready(function () {
 	positionEventHighlights();
+	$(window).on('resize', positionEventHighlights);
 });
 
 function positionEventHighlights() {
-	var sectionC = $('#home #wrapSectionSecondary .sectionC:hidden');
-	$(sectionC).appendTo('#home-alert-box');
-	$(sectionC).show();
-	/** css doesn't refresh all the way */
-	$('#home-alert-box .sectionC .gutter h4').css('color', 'white');
+	if (window.innerWidth < 631) {
+		var sectionC = $('#home #wrapSectionSecondary .sectionC:hidden');
+		$(sectionC).appendTo('#home #home-alert-box');
+		$(sectionC).show();
+	} else {
+		var sectionC = $('#home #home-alert-box .sectionC');
+		$(sectionC).insertAfter('#home #wrapSectionSecondary .sectionB');
+	}	
 }

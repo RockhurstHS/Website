@@ -967,6 +967,7 @@ img.banner, .banner img {
 		width: 228px; /* 23.75%; /* 228/960 */
 		float: right;
 		clear: none;
+		visibility: visible;
 	}
 
 		#home #wrapSectionSecondary .sectionC .gutter {
@@ -2583,10 +2584,14 @@ input[type="button"].QuickSearchButton {
 		#wrapCopyright .gutter {
 			padding: 0px;
 		}
+	#home #wrapSectionPrimary { /* this ended up working like a clearfix against #home-alert-box */
+		display: inline;
+		float: none;
+	}
 
 	/* maroon bars - Apply Now, Spiritual Resources, Rock Shop, Support RHS */
 	#home #wrapSectionPrimary .sectionA, #home #wrapSectionPrimary .sectionB, #home #wrapSectionPrimary .sectionC, #home #wrapSectionPrimary .sectionD {
-		/**/width: 40%;
+		/**/width: 46%;
 		float: none;
 		clear: none;
 		display: inline-block;
