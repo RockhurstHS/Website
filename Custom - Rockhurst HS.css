@@ -2584,8 +2584,8 @@ input[type="button"].QuickSearchButton {
 		#wrapCopyright .gutter {
 			padding: 0px;
 		}
+
 	#home #wrapSectionPrimary { /* this ended up working like a clearfix against #home-alert-box */
-		display: inline;
 		float: none;
 	}
 
@@ -2667,7 +2667,6 @@ input[type="button"].QuickSearchButton {
 		text-indent: 20px;
 		display: block;
 		position: relative;
-		left: 10px;
 
 		background: rgba(41,126,159,1);
 		background: -moz-linear-gradient(left, rgba(41,126,159,1) 0%, rgba(41,126,159,1) 17px, rgba(45,84,138,1) 17px, rgba(45,84,138,1) 100%);
