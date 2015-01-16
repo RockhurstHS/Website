@@ -2540,6 +2540,9 @@ input[type="button"].QuickSearchButton {
 #footerPhrase {
 	display: inline;
 }
+#home-black-bar-respond-button {
+	display: none;
+}
 
 
 
