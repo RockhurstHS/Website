@@ -19,7 +19,7 @@ function respond() {
 		$("#wrapNav .menu").accordion({
 			collapsible: true,
 			active: false,
-			heightStyle: "content"
+			autoHeight: false
 		});
 	} else {
 		$("#wrapNav .menu").accordion("destroy");

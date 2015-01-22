@@ -1484,6 +1484,7 @@ span.taRight {
 }
 
 	#wrapNav .menu ul {
+		height: initial;
 		background: #0B5191;
 		display: none;
 		position: absolute;
@@ -2720,11 +2721,17 @@ input[type="button"].QuickSearchButton {
 	ul li {
 		line-height: normal;
 	}
+
+
 	#wrapNav {
+		float: none;
+		clear: both;
 		background: none;
+		z-index: initial;
 	}
 		#wrapNav .menu ul {
 			position: relative;
+			width: 100%;
 		}
 		#wrapNav .menu li {
 			display: block;
@@ -2735,6 +2742,9 @@ input[type="button"].QuickSearchButton {
 			#wrapNav .menu li a {
 				padding-left: 25px;
 				line-height: 2em;
+			}
+			#wrapNav .menu li:hover ul li.first a {
+				padding-top: 0px;
 			}
 
 	/* maroon bars - Apply Now, Spiritual Resources, Rock Shop, Support RHS */
