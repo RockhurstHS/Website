@@ -2738,6 +2738,7 @@ input[type="button"].QuickSearchButton {
 	input[type="text"].QuickSearchTextbox { 
 		font-size: 16px!important
 	}
+
 	#wrapNav {
 		float: none;
 		clear: both;
@@ -2747,6 +2748,9 @@ input[type="button"].QuickSearchButton {
 		#wrapNav .menu ul {
 			position: relative;
 			width: 100%;
+			top: initial;
+			height: initial;
+			background: initial;
 		}
 		#wrapNav .menu li {
 			display: block;
@@ -2757,6 +2761,17 @@ input[type="button"].QuickSearchButton {
 			#wrapNav .menu li a {
 				padding-left: 25px;
 				line-height: 2em;
+				background: rgba(38,90,176,1);
+				background: -moz-linear-gradient(top, rgba(38,90,176,1) 0%, rgba(38,90,176,1) 50%, rgba(1,60,162,1) 51%, rgba(1,60,162,1) 100%);
+				background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(38,90,176,1)), color-stop(50%, rgba(38,90,176,1)), color-stop(51%, rgba(1,60,162,1)), color-stop(100%, rgba(1,60,162,1)));
+				background: -webkit-linear-gradient(top, rgba(38,90,176,1) 0%, rgba(38,90,176,1) 50%, rgba(1,60,162,1) 51%, rgba(1,60,162,1) 100%);
+				background: -o-linear-gradient(top, rgba(38,90,176,1) 0%, rgba(38,90,176,1) 50%, rgba(1,60,162,1) 51%, rgba(1,60,162,1) 100%);
+				background: -ms-linear-gradient(top, rgba(38,90,176,1) 0%, rgba(38,90,176,1) 50%, rgba(1,60,162,1) 51%, rgba(1,60,162,1) 100%);
+				background: linear-gradient(to bottom, rgba(38,90,176,1) 0%, rgba(38,90,176,1) 50%, rgba(1,60,162,1) 51%, rgba(1,60,162,1) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#265ab0', endColorstr='#013ca2', GradientType=0 );
+			}
+			#wrapNav .menu li:hover ul li {
+				width: 100%;
 			}
 			#wrapNav .menu li:hover ul li.first a {
 				padding-top: 0px;
