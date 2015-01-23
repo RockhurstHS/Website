@@ -2600,6 +2600,20 @@ input[type="button"].QuickSearchButton {
 		margin-top:7px;
 	}
 
+		#home #wrapSectionPrimary h2 {
+			background: url('image/layout/bg_ribbonLeft_home.png') no-repeat left top, -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.96) 23%, rgba(106,40,42,1) 24%, rgba(106,40,42,1) 100%); /* FF3.6+ */
+			background: url('image/layout/bg_ribbonLeft_home.png') no-repeat left top, -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(23%,rgba(255,255,255,0.96)), color-stop(24%,rgba(106,40,42,1)), color-stop(100%,rgba(106,40,42,1))); /* Chrome,Safari4+ */
+			background: url('image/layout/bg_ribbonLeft_home.png') no-repeat left top, -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.96) 23%,rgba(106,40,42,1) 24%,rgba(106,40,42,1) 100%); /* Chrome10+,Safari5.1+ */
+			background: url('image/layout/bg_ribbonLeft_home.png') no-repeat left top, -o-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.96) 23%,rgba(106,40,42,1) 24%,rgba(106,40,42,1) 100%); /* Opera 11.10+ */
+			background: url('image/layout/bg_ribbonLeft_home.png') no-repeat left top, -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.96) 23%,rgba(106,40,42,1) 24%,rgba(106,40,42,1) 100%); /* IE10+ */
+			background: url('image/layout/bg_ribbonLeft_home.png') no-repeat left top, linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.96) 23%,rgba(106,40,42,1) 24%,rgba(106,40,42,1) 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#6a282a',GradientType=1 ); /* IE6-9 */
+			height: 68px; /* 68/16 */
+			margin: 0 0 0 -10px; /* top right bottom left */
+			text-indent: 10.96491228070175%; /* 25/228 */
+			/* z-index: 2; */
+		}
+
 	/* slogan */
 	#wrapFooterContact {
 		float: none;
