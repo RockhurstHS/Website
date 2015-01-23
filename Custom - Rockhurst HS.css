@@ -2403,7 +2403,7 @@ select.BBFormDisplaySelectWithOther {
 
 input[type="text"].QuickSearchTextbox {
 	width: 100%; /* 141/175 */
-	height: 30px;
+	height: 24px;
 	line-height: 16px;
 	margin: 0;
 	padding: 2px 0 0 0;
@@ -2734,6 +2734,9 @@ input[type="button"].QuickSearchButton {
 @media screen and (max-width: 480px) {
 	ul li {
 		line-height: normal;
+	}
+	input[type="text"].QuickSearchTextbox { 
+		font-size: 16px!important
 	}
 	#wrapNav {
 		float: none;
