@@ -2685,6 +2685,20 @@ input[type="button"].QuickSearchButton {
 		text-decoration: none;
 	}
 }
+/* logo collides with quick links and calendar */
+@media screen and (max-width: 606px) {
+	#logo {
+		display: none;
+	}
+
+	#logo h1 {
+		display: none;
+		line-height: initial;
+	}
+		#logo h1 a {
+			display: none;
+		}
+}
 
 /* the search bar and black bar collide left */
 @media screen and (max-width: 540px) {
@@ -2721,8 +2735,6 @@ input[type="button"].QuickSearchButton {
 	ul li {
 		line-height: normal;
 	}
-
-
 	#wrapNav {
 		float: none;
 		clear: both;
@@ -2755,12 +2767,13 @@ input[type="button"].QuickSearchButton {
 		display: block;
 		margin-top:7px;
 	}
-	
 	.sectionA, .sectionB, .sectionC, .sectionD {
 		width: auto;
 		display: inline-block;
 	}
-
+	#home .sectionC .gutter h4:last-child {
+		margin-bottom: 21px;
+	}
 	#wrapFooterContact .gutter p {
 		font-size: 1.213em;
 	}
@@ -2768,7 +2781,6 @@ input[type="button"].QuickSearchButton {
 		width: 100%;
 		background: none;
 	}
-
 }
 
 
