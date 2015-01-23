@@ -2403,7 +2403,7 @@ select.BBFormDisplaySelectWithOther {
 
 input[type="text"].QuickSearchTextbox {
 	width: 100%; /* 141/175 */
-	height: 24px;
+	height: 28px;
 	line-height: 16px;
 	margin: 0;
 	padding: 2px 0 0 0;
