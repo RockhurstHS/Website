@@ -24,29 +24,10 @@ var _currentHref = window.location.href; //url of current page
 //jQuery is the argument passed into this function
 //explanation: http://stackoverflow.com/questions/2937227/what-does-function-jquery-mean
 (function ($) {
+	console.log('loading slideshow');
     //a jquery extension
     $.fn.SlideSet = function (options) {
         //function call and provided options @ https://www.rockhursths.edu/document.doc?id=7
-        //this overrides below defaults:
-        /*
-    		$('.slide').SlideSet({
-				 display: 'slideshow',
-				 tabs: 'browse',
-				 prev: '&laquo;',
-				 next: '&raquo;',
-				 tabParams: {
-				  effect: "fade",
-				  fadeOutSpeed: "slow",
-				  rotate: true
-				 },
-				 slideshowParams: {
-				  autoplay: true
-				 },
-				 tabPosition: 'bottom',
-				 tabNavPos: 'none',
-				 tabQty: 'auto'
-			});			
-        */
         var defaults = {
             tabs: 'none',   // 'thumb' uses image; 'tab' uses text; 'browse' uses left and right arrows; 'none' does not build tabs
             prev: '&laquo;', // text for 'previous' button
