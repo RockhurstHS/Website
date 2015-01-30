@@ -5,12 +5,12 @@ $(document).ready(function () {
 });
 
 function respond() {
-	//position blue event highlights
+	//position blue event highlights (sectionC) above weekly news and daily events (sectionA and sectionB) in the DOM
 	if (window.innerWidth < 631) {
 		var sectionC = $('#home #wrapSectionSecondary .sectionC:hidden');
 		$(sectionC).appendTo('#home #home-alert-box');
 		$(sectionC).show();
-	} else {
+	} else { //replace to original position
 		var sectionC = $('#home #home-alert-box .sectionC');
 		$(sectionC).insertAfter('#home #wrapSectionSecondary .sectionB');
 	}
@@ -21,7 +21,8 @@ function respond() {
 			active: false,
 			autoHeight: false
 		});
-	} else {
+	} else { //undo accordion
 		$("#wrapNav .menu").accordion("destroy");
+		$('#wrapNav .menu li a').removeClass('ui-state-focus');
 	}
 }

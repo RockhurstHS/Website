@@ -25,6 +25,7 @@ body {
 	color: #454545;
 	margin: 0;
 	padding: 0;
+	border: 0;
 }
 
 *.ListViewEventSubtitle, *.ListViewEventTime, *.ListViewEventLocation, *.BBFormSelectList, *.BBFormTextArea, *.BBFormTextbox, *.DiscussionGroupMessage, *.DiscussionGroupHeadingText, *.BBNotesTextBox, *.EventItemTitleDescription, *.DiscussionTopicListHeader, *.BBMessage, *.BBNotesNoteCell {
@@ -1171,6 +1172,10 @@ img.banner, .banner img {
 
 	#internal.twoCol #wrapSectionSecondary .sectionC {
 	}
+
+#internal.threeCol #wrapSectionPrimary .sectionC {
+	float: right;
+}
 /*----- formattedTable ---*/
 
 *.formattedTable {
@@ -2536,7 +2541,16 @@ input[type="button"].QuickSearchButton {
 .GivingSearchResultLink {
 	padding: 0;
 }
-
+.bbecbreadcrumbs {
+	color: #444444;
+	font-size: 12px;
+	background-color: #F2F6FB;
+	border-bottom: 1px solid #A6B6C5;
+	height: 17px;
+	overflow: hidden;
+	padding: 4px 5px 0px 5px;
+	white-space: nowrap;
+}
 #footerPhrase {
 	display: inline;
 }
@@ -2756,6 +2770,63 @@ input[type="button"].QuickSearchButton {
 	input[type="text"].QuickSearchTextbox { 
 		font-size: 16px!important
 	}
+
+	/** COLLAPSING CONSTITUENT MENU
+	#utilityMenu {
+		position: relative;
+		display: inline-block;
+	}
+	#utilityMenu #home-black-bar-respond-button {
+		display: initial;
+		background: #FF6223;
+		color: #FFFFFF;
+		border: none;
+		margin: 0;
+		padding: 0.4em 0.8em;
+		font-size: 1em;
+	}
+	#utilityMenu .menu {
+		position: absolute;
+		top: 100%;
+		display: block;
+		margin: 0;
+		list-style: none; 
+		width: 100%;
+		padding: 0;
+	}
+	#utilityMenu:hover .menu li:not(:first-child) a {
+		position: static;
+	}
+	#utilityMenu a {
+		display: block;
+		padding: 0.2em 0.8em;
+		text-decoration: none;
+		background: #CCCCCC;
+		color: #333333;
+		position: absolute;
+		top: -9999px;
+	}
+	#utilityMenu a:hover {
+		background: #BBBBBB;
+	}
+
+	#utilityMenu .menu li:first-child {
+		bottom: 100%;
+		left: 100%;
+		position: absolute;
+		padding-left: 5px;
+	}
+	#utilityMenu:hover .menu li:first-child:hover ~ li{
+		display:none;
+	}
+
+	#utilityMenu .menu li:first-child a {
+		position: static;
+		background: #fff;
+		padding: 0.4em 0.8em;
+		font-size: 1em;
+	}
+	*/	
 
 	#wrapNav {
 		float: none;
