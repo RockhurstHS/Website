@@ -726,7 +726,7 @@ img.banner, .banner img {
 }
 
 #contentPrimary {
-	width: 650px;
+	width: 650px; /* 650/960 */
 	float: right;
 	margin-right: 28px;
 }
@@ -2587,6 +2587,48 @@ input[type="button"].QuickSearchButton {
 	}
 }
 
+/* 2 column - left nav collapses under banner */
+@media screen and (max-width: 931px) {
+	#internal #contentPrimary {
+		width: 100%;
+		margin-left: 1.75%; /* 28/960 */
+		margin-right: 1.75%; /* 28/960 */
+		float: none;
+	}
+	#internal #wrapSectionPrimary {
+		float: none;
+		width: 100%;
+		margin-right: 150px;
+	}
+	/* this margin-right is behaving strange, i keep having to step down at various widths*/
+	/* a single percent or px won't work */
+	#internal #contentPrimary .gutter {
+		margin-right: 14px;
+	}
+
+	#internal #contentSecondary .menu > li:not(.selected),
+	#internal #contentSecondary .menu > li.selected > ul > li:not(.selected),
+	#internal #contentSecondary .menu > li.selected > ul > li.selected > ul:not(.nccUlMenuSub2),
+	#internal #contentSecondary .menu > li.selected > ul > li.selected > ul.nccUlMenuSub2 ul {
+		display: none;
+		/*
+		-webkit-column-count: 2; -webkit-column-gap:20px;
+		-moz-column-count:2; -moz-column-gap:20px;
+		-o-column-count:2; -o-column-gap:20px;
+		column-count:2; column-gap:20px;
+			*/
+	}
+}
+
+/* this margin-right is behaving strange, i keep having to step down at various widths*/
+@media screen and (max-width: 600px) {
+	#internal #contentPrimary .gutter {
+		margin-right: 2.5%;
+	}
+}
+
+/*719*/
+
 /* TABLETS */
 @media screen and (max-width: 768px) {
 	#wrapContent {
@@ -2715,6 +2757,9 @@ input[type="button"].QuickSearchButton {
 	#home-alert-box .sectionC .gutter h4 a {
 		color: #fff;
 		text-decoration: none;
+	}
+	#internal #contentPrimary .sectionB {
+		text-align: justify;
 	}
 }
 /* logo collides with quick links and calendar */
@@ -2887,6 +2932,44 @@ input[type="button"].QuickSearchButton {
 	.slideshow .content {
 		width: 100%;
 		background: none;
+	}
+	#internal #contentSecondary .gutterLower h4 {
+		color: #fff;
+		background-color: #6A282A;
+		text-transform: uppercase;
+		font-weight: normal;
+		line-height: 35px;
+		height: 35px;
+		margin: 0;
+		display: block;
+		position: relative;
+		left: initial;
+		margin-left: 1.75%;
+		margin-right: 1.75%;
+		margin-bottom: 12px;
+		width: 100%;
+		padding-right: 12px;
+	}
+	#internal #contentSecondary {
+		width: 100%;
+	}
+	#internal #contentSecondary .gutterLower h4 a {
+		color: #fff;
+		display: block;
+		text-align: right;
+	}
+
+		#internal #contentSecondary .gutterLower h4 a:hover {
+			color: #f4e9e9;
+			text-decoration: none;
+		}
+
+	#internal #contentSecondary .gutterLower h4 img {
+		float: right;
+		height: 35px;
+		width: 69px;
+		margin-left: 12px;
+		margin-right: -12px;
 	}
 }
 
