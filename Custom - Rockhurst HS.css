@@ -2946,9 +2946,9 @@ input[type="button"].QuickSearchButton {
 		left: initial;
 		margin-left: 1.75%;
 		margin-right: 1.75%;
-		margin-bottom: 12px;
+		margin-bottom: 7px;
 		width: 100%;
-		padding-right: 12px;
+		padding-right: 0;
 	}
 	#internal #contentSecondary {
 		width: 100%;
@@ -2964,12 +2964,33 @@ input[type="button"].QuickSearchButton {
 			text-decoration: none;
 		}
 
+	
+	#internal #wrapContentInner {
+		padding-top: 15px;
+	}
+	#internal #contentSecondary .gutter {
+		padding-left: 1.75%;
+		width: 100%;
+	}
+	#internal #contentSecondary .gutterLower {
+		padding: 0;
+		margin-right: -12px;
+	}
+
 	#internal #contentSecondary .gutterLower h4 img {
 		float: right;
 		height: 35px;
 		width: 69px;
-		margin-left: 12px;
-		margin-right: -12px;
+		margin-right: 6px;
+	}
+	#internal #contentSecondary .gutterLower h4 a {
+		font-size: 1em;
+	}
+	#internal #wrapSectionSecondary {
+		padding-bottom: 14px;
+	}
+	#internal #contentSecondary .menu li.selected + a {
+		text-align: center;
 	}
 }
 
