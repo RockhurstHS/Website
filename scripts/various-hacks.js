@@ -1,4 +1,11 @@
-﻿
+﻿/*
+write a script to
+
+inject Home page links to accordion
+remove home page links from accordion
+
+*/
+
 $(document).ready(function () {
 	respond();
 	$(window).on('resize', respond);
@@ -38,3 +45,4 @@ function notifyBrowserUpdate() {
 	try { document.addEventListener("DOMContentLoaded", $buo_f, false) }
 	catch (e) { window.attachEvent("onload", $buo_f) }
 }
+

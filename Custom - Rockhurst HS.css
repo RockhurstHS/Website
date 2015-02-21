@@ -266,7 +266,10 @@ p {
 	padding: 0 0 1.5em;
 	line-height: 1.5em;
 }
-
+P.smallText {
+	padding: 0;
+	line-height: initial;
+}
 	p.bodyEmphasis {
 		color: #888;
 		font-style: italic;
@@ -352,7 +355,7 @@ q {
 .sectionIndex .sectionC blockquote, .threeCol .sectionC blockquote {
 	margin-top: 0;
 	margin-left: -10px;
-	width: 17.1875%; /* 165/960 */
+	width: 165px;
 }
 /* --- LIST STYLES --- */
 
@@ -621,6 +624,7 @@ body {
 	width: 50%;
 	height: 59px;
 	margin-bottom: 6px;
+	margin-top:12px;
 }
 
 	#logo .gutter {
@@ -848,12 +852,12 @@ img.banner, .banner img {
 	}
 
 	#wrapSectionPrimary .sectionB {
-		width: 45.833333333333333333333333333333%; /* 440/960 */
+		width: 65%; /* 440/960 */
 		float: left;
 	}
 
 	#wrapSectionPrimary .sectionC {
-		width: 19.0625%; /* 183/960 */
+		/*width: 19.0625%; /* 183/960 */
 		/*float: right;*/
 	}
 
@@ -2557,6 +2561,10 @@ input[type="button"].QuickSearchButton {
 #home-black-bar-respond-button {
 	display: none;
 }
+.banner-caption {
+	font-size: 0.75em;
+	text-align: center;
+}
 
 /** MEDIA QUERIES OVERRIDE PREVIOUS STYLES IF THE VISITING BROWSER MATCHES THE QUERY */
 
@@ -2912,12 +2920,15 @@ input[type="button"].QuickSearchButton {
 			}
 
 	/* maroon bars - Apply Now, Spiritual Resources, Rock Shop, Support RHS */
-	#home #wrapSectionPrimary .sectionA, #home #wrapSectionPrimary .sectionB, #home #wrapSectionPrimary .sectionC, #home #wrapSectionPrimary .sectionD {
+	#home #wrapSectionPrimary .sectionA, #home #wrapSectionPrimary .sectionB, #home #wrapSectionPrimary .sectionC, #home #wrapSectionPrimary .sectionD, #internal #wrapSectionPrimary .sectionB {
 		width: 100%;
 		float: none;
 		clear: none;
 		display: block;
 		margin-top:7px;
+	}
+	#contentPrimary .menu {
+		margin-top: 15px;
 	}
 	.sectionA, .sectionB, .sectionC, .sectionD {
 		width: auto;
