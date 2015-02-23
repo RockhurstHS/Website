@@ -852,7 +852,7 @@ img.banner, .banner img {
 	}
 
 	#wrapSectionPrimary .sectionB {
-		width: 65%; /* 440/960 */
+		width: 65%; /* arbitrary, not 440/960 */
 		float: left;
 	}
 
@@ -2565,6 +2565,20 @@ input[type="button"].QuickSearchButton {
 	font-size: 0.75em;
 	text-align: center;
 }
+#internal .sectionC blockquote:not(h3) {
+	font-size: 0.825em;
+}
+#internal .sectionC blockquote h3 {
+	font-size: 1.2em;
+}
+#internal .sectionC blockquote strong {
+	font-size: 1.1em;
+}
+#wrapSectionPrimary .sectionA .menu {
+	margin-top: 14px;
+}
+/* http://embedresponsively.com/ */
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
 /** MEDIA QUERIES OVERRIDE PREVIOUS STYLES IF THE VISITING BROWSER MATCHES THE QUERY */
 
@@ -2625,6 +2639,9 @@ input[type="button"].QuickSearchButton {
 		-o-column-count:2; -o-column-gap:20px;
 		column-count:2; column-gap:20px;
 			*/
+	}
+	#wrapSectionPrimary .sectionB {
+		width: 65%;
 	}
 }
 
@@ -2783,6 +2800,21 @@ input[type="button"].QuickSearchButton {
 		#logo h1 a {
 			display: none;
 		}
+}
+/* internal 3 col - contacts bump into main body */
+@media screen and (max-width: 585px) {
+	#internal.threeCol #wrapSectionPrimary .sectionB {
+		width: 100%;
+	}
+	#internal.threeCol .sectionC blockquote {
+		display: inline-block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#internal.threeCol .sectionC, #internal.threeCol .sectionC .gutter {
+		text-align: center;
+		width: 100%;
+	}
 }
 
 /* the search bar and black bar collide left */
