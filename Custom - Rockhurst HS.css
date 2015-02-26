@@ -266,7 +266,10 @@ p {
 	padding: 0 0 1.5em;
 	line-height: 1.5em;
 }
-
+P.smallText {
+	padding: 0;
+	line-height: initial;
+}
 	p.bodyEmphasis {
 		color: #888;
 		font-style: italic;
@@ -352,7 +355,7 @@ q {
 .sectionIndex .sectionC blockquote, .threeCol .sectionC blockquote {
 	margin-top: 0;
 	margin-left: -10px;
-	width: 17.1875%; /* 165/960 */
+	width: 165px;
 }
 /* --- LIST STYLES --- */
 
@@ -621,6 +624,7 @@ body {
 	width: 50%;
 	height: 59px;
 	margin-bottom: 6px;
+	margin-top:12px;
 }
 
 	#logo .gutter {
@@ -848,12 +852,12 @@ img.banner, .banner img {
 	}
 
 	#wrapSectionPrimary .sectionB {
-		width: 45.833333333333333333333333333333%; /* 440/960 */
+		width: 65%; /* arbitrary, not 440/960 */
 		float: left;
 	}
 
 	#wrapSectionPrimary .sectionC {
-		width: 19.0625%; /* 183/960 */
+		/*width: 19.0625%; /* 183/960 */
 		/*float: right;*/
 	}
 
@@ -1175,6 +1179,7 @@ img.banner, .banner img {
 
 #internal.threeCol #wrapSectionPrimary .sectionC {
 	float: right;
+	width: 183px;
 }
 /*----- formattedTable ---*/
 
@@ -2557,12 +2562,41 @@ input[type="button"].QuickSearchButton {
 #home-black-bar-respond-button {
 	display: none;
 }
+.banner-caption {
+	font-size: 0.75em;
+	text-align: center;
+}
+#internal .sectionC blockquote:not(h3) {
+	font-size: 0.825em;
+}
+#internal .sectionC blockquote h3 {
+	font-size: 1.2em;
+}
+#internal .sectionC blockquote strong {
+	font-size: 1.1em;
+}
+#wrapSectionPrimary .sectionA .menu {
+	margin-top: 14px;
+}
+#rhs-calendar-check-boxes, #rhs-calendar-check-boxes li {
+	list-style: none;
+	line-height: initial;
+	padding: 0;
+}
+#rhs-calendar-check-boxes {
+	-moz-column-count: 3;
+	-webkit-column-count: 3;
+	column-count: 3;
+}
+
+/* http://embedresponsively.com/ for the admissions video and any embedded object in general */
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
 /** MEDIA QUERIES OVERRIDE PREVIOUS STYLES IF THE VISITING BROWSER MATCHES THE QUERY */
 
 @media screen and (max-width: 960px) {
-	#wrapMedia {
-		display: none;
+	#wrapMedia #rhs-google-calendars {
+		/*display: none;*/
 	}
 }
 /* weekly news moves under daily events */
@@ -2618,10 +2652,27 @@ input[type="button"].QuickSearchButton {
 		column-count:2; column-gap:20px;
 			*/
 	}
+	#wrapSectionPrimary .sectionB {
+		width: 65%;
+	}
+	.addthis_button {
+		display: none;
+	}
 }
-
+@media screen and (max-width: 891px) {
+	#rhs-calendar-check-boxes {
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+}
 /* this margin-right is behaving strange, i keep having to step down at various widths*/
 @media screen and (max-width: 600px) {
+	#rhs-calendar-check-boxes {
+		-moz-column-count: 1;
+		-webkit-column-count: 1;
+		column-count: 1;
+	}
 	#internal #contentPrimary .gutter {
 		margin-right: 2.5%;
 	}
@@ -2776,6 +2827,25 @@ input[type="button"].QuickSearchButton {
 			display: none;
 		}
 }
+/* internal 3 col - contacts bump into main body */
+@media screen and (max-width: 585px) {
+	#internal.threeCol #wrapSectionPrimary .sectionB {
+		width: 100%;
+	}
+	#internal.threeCol .sectionC blockquote {
+		display: inline-block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#internal.threeCol .sectionC, #internal.threeCol .sectionC .gutter {
+		text-align: center;
+		width: 100%;
+	}
+	#internal.threeCol #wrapSectionPrimary .sectionC {
+		width: 100%;
+		margin-top: 20px;
+	}
+}
 
 /* the search bar and black bar collide left */
 @media screen and (max-width: 540px) {
@@ -2912,12 +2982,15 @@ input[type="button"].QuickSearchButton {
 			}
 
 	/* maroon bars - Apply Now, Spiritual Resources, Rock Shop, Support RHS */
-	#home #wrapSectionPrimary .sectionA, #home #wrapSectionPrimary .sectionB, #home #wrapSectionPrimary .sectionC, #home #wrapSectionPrimary .sectionD {
+	#home #wrapSectionPrimary .sectionA, #home #wrapSectionPrimary .sectionB, #home #wrapSectionPrimary .sectionC, #home #wrapSectionPrimary .sectionD, #internal #wrapSectionPrimary .sectionB {
 		width: 100%;
 		float: none;
 		clear: none;
 		display: block;
 		margin-top:7px;
+	}
+	#contentPrimary .menu {
+		margin-top: 15px;
 	}
 	.sectionA, .sectionB, .sectionC, .sectionD {
 		width: auto;
@@ -2946,9 +3019,9 @@ input[type="button"].QuickSearchButton {
 		left: initial;
 		margin-left: 1.75%;
 		margin-right: 1.75%;
-		margin-bottom: 12px;
+		margin-bottom: 7px;
 		width: 100%;
-		padding-right: 12px;
+		padding-right: 0;
 	}
 	#internal #contentSecondary {
 		width: 100%;
@@ -2964,12 +3037,33 @@ input[type="button"].QuickSearchButton {
 			text-decoration: none;
 		}
 
+	
+	#internal #wrapContentInner {
+		padding-top: 15px;
+	}
+	#internal #contentSecondary .gutter {
+		padding-left: 1.75%;
+		width: 100%;
+	}
+	#internal #contentSecondary .gutterLower {
+		padding: 0;
+		margin-right: -12px;
+	}
+
 	#internal #contentSecondary .gutterLower h4 img {
 		float: right;
 		height: 35px;
 		width: 69px;
-		margin-left: 12px;
-		margin-right: -12px;
+		margin-right: 6px;
+	}
+	#internal #contentSecondary .gutterLower h4 a {
+		font-size: 1em;
+	}
+	#internal #wrapSectionSecondary {
+		padding-bottom: 14px;
+	}
+	#internal #contentSecondary .menu li.selected + a {
+		text-align: center;
 	}
 }
 
