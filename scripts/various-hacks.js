@@ -46,3 +46,13 @@ function notifyBrowserUpdate() {
 	catch (e) { window.attachEvent("onload", $buo_f) }
 }
 
+function showGoogleCalendarInAgendaMode(element) {
+	//var src = $('#rhs-google-calendars').attr("src");
+	if (window.innerWidth < 900) {
+		var source = element.src.split("?showTitle=0");
+		var left = source[0];
+		var right = source[1];
+		element.src = left + '?showTitle=0&mode=AGENDA' + right;
+		//console.log(left + '?showTitle=0&mode=AGENDA' + right);
+	}
+}

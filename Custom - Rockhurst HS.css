@@ -1179,6 +1179,7 @@ img.banner, .banner img {
 
 #internal.threeCol #wrapSectionPrimary .sectionC {
 	float: right;
+	width: 183px;
 }
 /*----- formattedTable ---*/
 
@@ -2643,6 +2644,9 @@ input[type="button"].QuickSearchButton {
 	#wrapSectionPrimary .sectionB {
 		width: 65%;
 	}
+	.addthis_button {
+		display: none;
+	}
 }
 
 /* this margin-right is behaving strange, i keep having to step down at various widths*/
@@ -2814,6 +2818,10 @@ input[type="button"].QuickSearchButton {
 	#internal.threeCol .sectionC, #internal.threeCol .sectionC .gutter {
 		text-align: center;
 		width: 100%;
+	}
+	#internal.threeCol #wrapSectionPrimary .sectionC {
+		width: 100%;
+		margin-top: 20px;
 	}
 }
 
