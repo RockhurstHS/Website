@@ -46,9 +46,9 @@ function notifyBrowserUpdate() {
 	catch (e) { window.attachEvent("onload", $buo_f) }
 }
 
-function showGoogleCalendarInAgendaMode(element) {
-	//var src = $('#rhs-google-calendars').attr("src");
+window.onload = function showGoogleCalendarInAgendaMode() {
 	if (window.innerWidth < 900) {
+		var element = document.getElementById('rhs-google-calendars');
 		var source = element.src.split("?showTitle=0");
 		var left = source[0];
 		var right = source[1];

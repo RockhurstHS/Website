@@ -2578,14 +2578,25 @@ input[type="button"].QuickSearchButton {
 #wrapSectionPrimary .sectionA .menu {
 	margin-top: 14px;
 }
-/* http://embedresponsively.com/ */
+#rhs-calendar-check-boxes, #rhs-calendar-check-boxes li {
+	list-style: none;
+	line-height: initial;
+	padding: 0;
+}
+#rhs-calendar-check-boxes {
+	-moz-column-count: 3;
+	-webkit-column-count: 3;
+	column-count: 3;
+}
+
+/* http://embedresponsively.com/ for the admissions video and any embedded object in general */
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
 /** MEDIA QUERIES OVERRIDE PREVIOUS STYLES IF THE VISITING BROWSER MATCHES THE QUERY */
 
 @media screen and (max-width: 960px) {
-	#wrapMedia {
-		display: none;
+	#wrapMedia #rhs-google-calendars {
+		/*display: none;*/
 	}
 }
 /* weekly news moves under daily events */
@@ -2648,9 +2659,20 @@ input[type="button"].QuickSearchButton {
 		display: none;
 	}
 }
-
+@media screen and (max-width: 891px) {
+	#rhs-calendar-check-boxes {
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+}
 /* this margin-right is behaving strange, i keep having to step down at various widths*/
 @media screen and (max-width: 600px) {
+	#rhs-calendar-check-boxes {
+		-moz-column-count: 1;
+		-webkit-column-count: 1;
+		column-count: 1;
+	}
 	#internal #contentPrimary .gutter {
 		margin-right: 2.5%;
 	}
