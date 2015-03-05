@@ -2595,8 +2595,11 @@ input[type="button"].QuickSearchButton {
 /** MEDIA QUERIES OVERRIDE PREVIOUS STYLES IF THE VISITING BROWSER MATCHES THE QUERY */
 
 @media screen and (max-width: 960px) {
-	#wrapMedia #rhs-google-calendars {
-		/*display: none;*/
+	#wrapMedia {
+		display: none;
+	}
+	.oneCol #wrapMedia {
+		display: initial;
 	}
 }
 /* weekly news moves under daily events */
