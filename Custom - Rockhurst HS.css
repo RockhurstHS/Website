@@ -2944,8 +2944,10 @@ input[type="button"].QuickSearchButton {
 		padding: 0.4em 0.8em;
 		font-size: 1em;
 	}
-	*/	
-
+	*/
+	.nav-image {
+		display: none;
+	}
 	#wrapNav {
 		float: none;
 		clear: both;
