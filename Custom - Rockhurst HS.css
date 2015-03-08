@@ -2285,13 +2285,13 @@ input[type="checkbox"], input[type="radio"] {
 *.BBFormDisplayErrorMessage {
 	background: none;
 	font-size: 0.75em; /* 12p/16p */
-	margin-left: 163px;
+	/*margin-left: 163px;*/
 }
 
 *.BBFormRequiredFieldMissingText, *.BBFormDisplayRequiredFieldMissingText {
 	background: none;
 	font-size: 0.75em; /* 12p/16p */
-	margin-left: 163px;
+	/*margin-left: 163px;*/
 	text-transform: uppercase;
 }
 
@@ -2587,6 +2587,10 @@ input[type="button"].QuickSearchButton {
 	-moz-column-count: 3;
 	-webkit-column-count: 3;
 	column-count: 3;
+}
+
+.BBSequenceMapContent fieldset div, .BBFormDisplaySequenceMapContent fieldset div {
+	min-height: 40px;
 }
 
 /* http://embedresponsively.com/ for the admissions video and any embedded object in general */
