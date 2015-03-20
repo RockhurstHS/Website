@@ -2292,6 +2292,8 @@ input[type="checkbox"], input[type="radio"] {
 	background: none;
 	font-size: 0.75em; /* 12p/16p */
 	/*margin-left: 163px;*/
+	float: right;
+	width: 20%;
 	text-transform: uppercase;
 }
 
@@ -2313,15 +2315,13 @@ legend {
 }
 
 label.BBFormDisplayFieldCaption {
-	display: block;
-	float: left;
-	width: 150px;
-	padding-top: 5px;
+	display: inline-block;
+	width: 20%;
 	font-size: 0.75em; /* 12p/16p */
 }
 
 input.BBFormDisplayTextbox, select.BBFormDisplaySelectList {
-	float: left;
+	width: 45%;
 }
 
 *.BBSequenceMapOptionalContainer {
@@ -2330,7 +2330,7 @@ input.BBFormDisplayTextbox, select.BBFormDisplaySelectList {
 }
 
 input[type="text"], input[type="password"], *.BBFormTextbox, *.BBFormTextArea, *.BBFormDisplayTextbox, *.BBFormDisplayTextArea {
-	width: 250px;
+	width: 45%;
 }
 
 input[type="text"], input[type="password"], *.BBFormTextbox, *.BBFormTextArea, *.BBFormDisplayTextbox, *.BBFormDisplayTextArea, select, *.BBFormSelectList {
@@ -2589,8 +2589,9 @@ input[type="button"].QuickSearchButton {
 	column-count: 3;
 }
 
-.BBSequenceMapContent fieldset div, .BBFormDisplaySequenceMapContent fieldset div {
+.BBSequenceMapContent fieldset > div, .BBFormDisplaySequenceMapContent fieldset > div {
 	min-height: 40px;
+	vertical-align: baseline;
 }
 
 /* http://embedresponsively.com/ for the admissions video and any embedded object in general */
