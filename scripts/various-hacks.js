@@ -10,6 +10,7 @@ $(document).ready(function () {
 	respond();
 	$(window).on('resize', respond);
 	notifyBrowserUpdate();
+	stripFormInlineStyles();
 });
 
 function respond() {
@@ -45,6 +46,10 @@ function notifyBrowserUpdate() {
 	try { document.addEventListener("DOMContentLoaded", $buo_f, false) }
 	catch (e) { window.attachEvent("onload", $buo_f) }
 }
+
+var stripFormInlineStyles = function () {
+	$('.BBFormErrorMessage').removeAttr('style');
+};
 
 window.onload = function showGoogleCalendarInAgendaMode() {
 	if (window.innerWidth < 900) {

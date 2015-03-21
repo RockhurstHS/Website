@@ -1849,11 +1849,6 @@ fieldset {
 	margin: 1em 0.5em;
 }
 
-label {
-	font-family: inherit;
-	font-size: 1em;
-}
-
 fieldset legend {
 	margin-top: 1em;
 }
@@ -2283,23 +2278,25 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 *.BBFormDisplayErrorMessage {
+	display: block;
 	background: none;
 	font-size: 0.75em; /* 12p/16p */
-	/*margin-left: 163px;*/
+	margin-left: 27%;
 }
 
 *.BBFormRequiredFieldMissingText, *.BBFormDisplayRequiredFieldMissingText {
-	background: none;
+	display: block;
 	font-size: 0.75em; /* 12p/16p */
-	/*margin-left: 163px;*/
 	float: right;
 	width: 20%;
 	text-transform: uppercase;
+	margin-top: 7px;
 }
 
 *.BBFormRequiredFieldMarker {
 	font-size: 1.125em; /* 18p/16p */
 	color: #F00;
+	margin-top: 5px;
 }
 
 fieldset {
@@ -2314,14 +2311,11 @@ legend {
 	padding: 5px 0;
 }
 
-label.BBFormDisplayFieldCaption {
+.BBSequenceMapContent fieldset label {
 	display: inline-block;
-	width: 20%;
+	width: 25%;
 	font-size: 0.75em; /* 12p/16p */
-}
-
-input.BBFormDisplayTextbox, select.BBFormDisplaySelectList {
-	width: 45%;
+	margin-right: 2%;
 }
 
 *.BBSequenceMapOptionalContainer {
@@ -2330,7 +2324,7 @@ input.BBFormDisplayTextbox, select.BBFormDisplaySelectList {
 }
 
 input[type="text"], input[type="password"], *.BBFormTextbox, *.BBFormTextArea, *.BBFormDisplayTextbox, *.BBFormDisplayTextArea {
-	width: 45%;
+	width: 37%;
 }
 
 input[type="text"], input[type="password"], *.BBFormTextbox, *.BBFormTextArea, *.BBFormDisplayTextbox, *.BBFormDisplayTextArea, select, *.BBFormSelectList {
@@ -2591,7 +2585,6 @@ input[type="button"].QuickSearchButton {
 
 .BBSequenceMapContent fieldset > div, .BBFormDisplaySequenceMapContent fieldset > div {
 	min-height: 40px;
-	vertical-align: baseline;
 }
 
 /* http://embedresponsively.com/ for the admissions video and any embedded object in general */

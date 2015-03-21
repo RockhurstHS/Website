@@ -4263,22 +4263,19 @@ input[id$="txtAlias"] {
 	border-color: #999999;
 	color: #333;
 }
-
+/*
 *.BBFormDisplayRequiredFieldMissingText {
 	background-color: transparent;
-	/*
 	margin-bottom: 0;
 	margin-left: 1em;
 	margin-top: 0;
-	*/
 	font-size: 11px;
-}
+}*/
 
 *.BBFormDisplayErrorMessage {
-	background-color: transparent;
-	margin-bottom: 0;
-	margin-left: 0;
-	margin-top: 0;
+	display: block;
+	margin-left: 25%;
+	width: 75%;
 }
 
 #NewFormListDiv,
@@ -4302,6 +4299,7 @@ input[id$="txtAlias"] {
 }
 
 .BBFormDisplayHelpContainer {
+	display: none;
 	float: left;
 	position: relative;
 }
@@ -4455,10 +4453,10 @@ input[id$="txtAlias"] {
 .BBFormDisplayFileAttachmentErrorMessage {
 	float: left;
 }
-
+/*
 .BBFormDisplayFieldCaption {
 	float: left;
-	display: block;
+	display: inline-block;
 	width: 150px;
 	text-align: right;
 	margin-right: 8px;
@@ -4466,7 +4464,7 @@ input[id$="txtAlias"] {
 	padding-top: 2px;
 	white-space: normal !important;
 	clear: left;
-}
+}*/
 
 .BBFormDisplayCheckbox {
 	float: left;
@@ -4533,25 +4531,24 @@ input[id$="txtAlias"] {
 	width: 150px;
 	margin-right: 8px;
 }
-
+/*
 .BBFormDisplayErrorMessage {
 	background-color: #FFEEEE;
-	/*margin-bottom: 3px;*/
-	/*margin-left: 158px;*/
-	/*margin-top: 10px;*/
-}
+	margin-bottom: 3px;
+	margin-left: 158px;
+	margin-top: 10px;
+}*/
 
 .BBFormDisplayRequiredFieldMarker {
 	width: 4%;
 }
-
+/*
 .BBFormDisplayRequiredFieldMissingText {
 	background-color: #FFEEEE;
-	/*margin-bottom: 3px;*/
-	/*margin-left: 158px;*/
-	/*margin-top: 10px;*/
-}
-
+	margin-bottom: 3px;
+	margin-left: 158px;
+	margin-top: 10px;
+}*/
 .BBFormDisplaySelectList {
 	margin-right: 8px;
 }
@@ -4560,11 +4557,11 @@ input[id$="txtAlias"] {
 	width: 300px;
 	margin-right: 8px;
 }
-
+/*
 .BBFormDisplayTextbox {
 	width: 150px;
 	margin-right: 8px;
-}
+}*/
 
 .BBFormDisplayNewFormListEvenRowStyle {
 }
