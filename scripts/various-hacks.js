@@ -9,11 +9,10 @@ remove home page links from accordion
 $(document).ready(function () {
 	respond();
 	$(window).on('resize', respond);
-	notifyBrowserUpdate();
-	stripFormInlineStyles();
+	correctFormCSS();
 });
 
-function respond() {
+var respond = function() {
 	//position blue event highlights (sectionC) above weekly news and daily events (sectionA and sectionB) in the DOM
 	if (window.innerWidth < 631) {
 		var sectionC = $('#home #wrapSectionSecondary .sectionC:hidden');
@@ -35,19 +34,10 @@ function respond() {
 		$('#wrapNav .menu li a').removeClass('ui-state-focus');
 	}
 }
-/* this won't work, gotta move out this inner function i think*/
-function notifyBrowserUpdate() {
-	var $buoop = { c: 2 };
-	function $buo_f() {
-		var e = document.createElement("script");
-		e.src = "//browser-update.org/update.js";
-		document.body.appendChild(e);
-	};
-	try { document.addEventListener("DOMContentLoaded", $buo_f, false) }
-	catch (e) { window.attachEvent("onload", $buo_f) }
-}
 
-var stripFormInlineStyles = function () {
+var correctFormCSS = function () {
+	//strip form inline style from custom error message validator
+	//should be only if "display: inline;" ?
 	$('.BBFormErrorMessage').removeAttr('style');
 };
 
