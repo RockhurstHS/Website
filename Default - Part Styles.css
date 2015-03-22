@@ -4441,7 +4441,7 @@ input[id$="txtAlias"] {
 .BBFormDisplayFileAttachmentContainer {
 	padding: 5px;
 }
-
+/*
 .BBFormDisplayFileAttachment {
 	float: left;
 }
@@ -4452,7 +4452,7 @@ input[id$="txtAlias"] {
 
 .BBFormDisplayFileAttachmentErrorMessage {
 	float: left;
-}
+}*/
 /*
 .BBFormDisplayFieldCaption {
 	float: left;
@@ -4465,15 +4465,14 @@ input[id$="txtAlias"] {
 	white-space: normal !important;
 	clear: left;
 }*/
-
+/*
 .BBFormDisplayCheckbox {
 	float: left;
-}
+}*/
 
 .BBFormDisplayChecklist {
-	float: left;
 	border: none !important;
-	margin-right: 8px;
+	display: inline-block;
 }
 
 .BBFormDisplayCheckboxListWithOther {

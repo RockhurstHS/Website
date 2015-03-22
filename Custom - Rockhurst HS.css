@@ -32,6 +32,9 @@ body {
 	color: #464646;
 	font-family: Arial, Helvetica, sans-serif;
 }
+.BBFormDisplayFileAttachment .BBDocumentAddFile {
+	width: 100%;
+}
 /* --- LINK STYLES --- */
 
 a, a:link, *.JobBoardSearchLink:link, *.JobBoardPostLink:link, *.JobDetailLink:link, *.JobResultsLink:link, *.DiscussionFooterLink:link, *.DiscussionTopicLink:link, *.BBNameLink:link, *.NewsReaderItemLink, a.ListViewEventTitle:link, *.PagedListFooterLink:link, *.DonationCaptureLink:link, *.PageSharingListItemLink, *.PageSharingListItemLink:link, *.PageSharingListItemLink:visited, *.PageSharingLink:link {
@@ -2235,9 +2238,9 @@ fieldset legend {
 }
 
 input[type="checkbox"], input[type="radio"] {
-	margin: 4px 0.5em 4px 10px;
+	/*margin: 4px 0.5em 4px 10px;*/
 	padding: 10px;
-	vertical-align: middle;
+	/*vertical-align: top;*/
 }
 /* OLA & Forms  */
 
@@ -2322,6 +2325,9 @@ legend {
 	margin-right: 0;
 	margin-left: 0;
 }
+.BBFormDisplayCheckboxListContainer label, .BBFormDisplayCheckboxListContainer .BBFormRequiredFieldMarker  {
+	vertical-align: top;
+}
 
 input[type="text"], input[type="password"], *.BBFormTextbox, *.BBFormTextArea, *.BBFormDisplayTextbox, *.BBFormDisplayTextArea {
 	width: 37%;
@@ -2346,10 +2352,10 @@ input[type="text"], input[type="password"], *.BBFormTextbox, *.BBFormTextArea, *
 *.DonationTextboxNarrow, *.DonationCaptureTextboxNarrow {
 	width: 100px !important;
 }
-
+/*
 select.BBFormDisplaySelectWithOther {
 	float: left;
-}
+}*/
 
 .button, input[type="submit"], input[type="button"] {
 	margin: .25em;

@@ -12,6 +12,7 @@
 ====================================================================
  mm/dd/yyyy		...
  01/26/2015		JW: for local development, added lines 153-155, commented out lines 156-160, 170, 173
+ 03/21/2015		JW: turn off repositionRequiredFIeldMarkers
 ====================================================================
 */
 
@@ -28,7 +29,7 @@ BBI = {
 		pageLoad: function(){
 			this.checkEditView();
 			this.showPartTitle();
-			this.repositionRequiredFieldMarkers('.BBFieldCaption');
+			//this.repositionRequiredFieldMarkers('.BBFieldCaption');
 			this.fixPositioning();
 			this.quickSearch();
 			this.homeSlideshow();
