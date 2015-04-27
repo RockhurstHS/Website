@@ -1525,7 +1525,11 @@ span.taRight {
 			letter-spacing: 1px;
 		}
 
-		#wrapNav .menu li:hover a {
+
+
+/** progressively enhance: fixes the accordian effect from collapsing b/c of mouseover */
+@media screen and (min-width: 481px) {
+	#wrapNav .menu li:hover a {
 			display: block;
 			color: #454545;
 			background: url('image/layout/bg_wrapNav_hover.jpg') repeat-x;
@@ -1574,6 +1578,7 @@ span.taRight {
 			#wrapNav .menu li:hover ul ul {
 				display: none;
 			}
+}
 
 #contentPrimary .menu li, #contentPrimary .menu li a, #contentPrimary .menu li ul {
 	display: none;
@@ -2817,7 +2822,7 @@ input[type="button"].QuickSearchButton {
 		text-decoration: none;
 	}
 	#internal #contentPrimary .sectionB {
-		text-align: justify;
+		/*text-align: justify;*/
 	}
 }
 /* logo collides with quick links and calendar */
