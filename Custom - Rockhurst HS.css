@@ -1525,7 +1525,10 @@ span.taRight {
 			letter-spacing: 1px;
 		}
 
-
+#wrapHeader #wrapNav {
+	overflow: auto;
+	-webkit-overflow-scrolling: touch
+}
 
 /** progressively enhance: fixes the accordian effect from collapsing b/c of mouseover */
 @media screen and (min-width: 480px) {
