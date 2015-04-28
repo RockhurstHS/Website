@@ -1531,26 +1531,26 @@ span.taRight {
 }
 
 /** progressively enhance: fixes the accordian effect from collapsing b/c of mouseover */
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 481px) {
 	#wrapNav .menu li a {
 			display: block;
 			background: url('image/layout/bg_wrapNav_hover.jpg') repeat-x;
 		}
 
-		#wrapNav .menu li:hover ul {
+		#wrapNav .menu li ul {
 			display: block;
 		}
 
-			#wrapNav .menu li:hover ul li {
+			#wrapNav .menu li ul li {
 				border-right: none;
-				width: 200px;
+				/*width: 200px;*/
 				margin: 0;
 				padding: 0;
 				background: #e5e5e5;
 				height: auto;
 			}
-
-				#wrapNav .menu li:hover ul li a {
+				
+				#wrapNav .menu li ul li a {
 					display: block;
 					color: #003ca2;
 					text-transform: none;
@@ -1563,21 +1563,21 @@ span.taRight {
 					background: none;
 				}
 
-				#wrapNav .menu li:hover ul li.first a {
+				#wrapNav .menu li ul li.first a {
 					padding-top: 10px;
 				}
 
-				#wrapNav .menu li:hover ul li.last a {
+				#wrapNav .menu li ul li.last a {
 					border-bottom: 0 none;
 					padding-bottom: 10px;
 				}
-
+				/*
 				#wrapNav .menu li:hover ul li a:hover {
 					color: #454545;
 					background: none;
 				}
-
-			#wrapNav .menu li:hover ul ul {
+					*/
+			#wrapNav .menu li ul ul {
 				display: none;
 			}
 }
