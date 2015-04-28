@@ -1528,10 +1528,10 @@ span.taRight {
 
 
 /** progressively enhance: fixes the accordian effect from collapsing b/c of mouseover */
-@media screen and (min-width: 481px) {
-	#wrapNav .menu li:hover a {
+
+@media screen and (max-width: 481px) {
+	#wrapNav .menu li a {
 			display: block;
-			color: #454545;
 			background: url('image/layout/bg_wrapNav_hover.jpg') repeat-x;
 		}
 
@@ -1579,6 +1579,8 @@ span.taRight {
 				display: none;
 			}
 }
+	
+
 
 #contentPrimary .menu li, #contentPrimary .menu li a, #contentPrimary .menu li ul {
 	display: none;
