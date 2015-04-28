@@ -2650,6 +2650,10 @@ input[type="button"].QuickSearchButton {
 	min-height: 40px;
 }
 
+#PC3470_panelNewsReader table tbody tr:first-of-type {
+	display: none;
+}
+
 /* http://embedresponsively.com/ for the admissions video and any embedded object in general */
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
