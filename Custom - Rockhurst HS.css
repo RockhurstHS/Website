@@ -1525,15 +1525,13 @@ span.taRight {
 			letter-spacing: 1px;
 		}
 
-#wrapHeader #wrapNav {
-	overflow: auto;
-	-webkit-overflow-scrolling: touch
-}
+
 
 /** progressively enhance: fixes the accordian effect from collapsing b/c of mouseover */
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 480px) {
 	#wrapNav .menu li a {
 			display: block;
+			/*color: #454545;*/
 			background: url('image/layout/bg_wrapNav_hover.jpg') repeat-x;
 		}
 
@@ -1549,7 +1547,7 @@ span.taRight {
 				background: #e5e5e5;
 				height: auto;
 			}
-				
+
 				#wrapNav .menu li ul li a {
 					display: block;
 					color: #003ca2;
@@ -1572,12 +1570,64 @@ span.taRight {
 					padding-bottom: 10px;
 				}
 				/*
+				#wrapNav .menu li ul li a:hover {
+					color: #454545;
+					background: none;
+				}*/
+
+			#wrapNav .menu li ul ul {
+				display: none;
+			}
+}
+/*desktop reverse of above */
+@media screen and (min-width: 481px) {
+	#wrapNav .menu li:hover a {
+			display: block;
+			color: #454545;
+			background: url('image/layout/bg_wrapNav_hover.jpg') repeat-x;
+		}
+
+		#wrapNav .menu li:hover ul {
+			display: block;
+		}
+
+			#wrapNav .menu li:hover ul li {
+				border-right: none;
+				width: 200px;
+				margin: 0;
+				padding: 0;
+				background: #e5e5e5;
+				height: auto;
+			}
+
+				#wrapNav .menu li:hover ul li a {
+					display: block;
+					color: #003ca2;
+					text-transform: none;
+					border-bottom: 1px dotted #bcbcbd;
+					line-height: 2;
+					font-size: 0.8125em; /* 13p/16p */
+					margin: 0 15px;
+					padding: 0;
+					letter-spacing: 0;
+					background: none;
+				}
+
+				#wrapNav .menu li:hover ul li.first a {
+					padding-top: 10px;
+				}
+
+				#wrapNav .menu li:hover ul li.last a {
+					border-bottom: 0 none;
+					padding-bottom: 10px;
+				}
+
 				#wrapNav .menu li:hover ul li a:hover {
 					color: #454545;
 					background: none;
 				}
-					*/
-			#wrapNav .menu li ul ul {
+
+			#wrapNav .menu li:hover ul ul {
 				display: none;
 			}
 }
@@ -3082,4 +3132,5 @@ input[type="button"].QuickSearchButton {
 		text-align: center;
 	}
 }
+
 
