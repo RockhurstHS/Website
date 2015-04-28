@@ -1528,8 +1528,7 @@ span.taRight {
 
 
 /** progressively enhance: fixes the accordian effect from collapsing b/c of mouseover */
-
-@media screen and (max-width: 481px) {
+@media screen and (min-width: 480px) {
 	#wrapNav .menu li a {
 			display: block;
 			background: url('image/layout/bg_wrapNav_hover.jpg') repeat-x;
@@ -1579,8 +1578,6 @@ span.taRight {
 				display: none;
 			}
 }
-	
-
 
 #contentPrimary .menu li, #contentPrimary .menu li a, #contentPrimary .menu li ul {
 	display: none;
@@ -3082,5 +3079,4 @@ input[type="button"].QuickSearchButton {
 		text-align: center;
 	}
 }
-
 
