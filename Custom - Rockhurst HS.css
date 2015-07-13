@@ -1525,7 +1525,63 @@ span.taRight {
 			letter-spacing: 1px;
 		}
 
-		#wrapNav .menu li:hover a {
+
+
+/** progressively enhance: fixes the accordian effect from collapsing b/c of mouseover */
+@media screen and (max-width: 480px) {
+	#wrapNav .menu li a {
+			display: block;
+			/*color: #454545;*/
+			background: url('image/layout/bg_wrapNav_hover.jpg') repeat-x;
+		}
+
+		#wrapNav .menu li ul {
+			display: block;
+		}
+
+			#wrapNav .menu li ul li {
+				border-right: none;
+				/*width: 200px;*/
+				margin: 0;
+				padding: 0;
+				background: #e5e5e5;
+				height: auto;
+			}
+
+				#wrapNav .menu li ul li a {
+					display: block;
+					color: #003ca2;
+					text-transform: none;
+					border-bottom: 1px dotted #bcbcbd;
+					line-height: 2;
+					font-size: 0.8125em; /* 13p/16p */
+					margin: 0 15px;
+					padding: 0;
+					letter-spacing: 0;
+					background: none;
+				}
+
+				#wrapNav .menu li ul li.first a {
+					padding-top: 10px;
+				}
+
+				#wrapNav .menu li ul li.last a {
+					border-bottom: 0 none;
+					padding-bottom: 10px;
+				}
+				/*
+				#wrapNav .menu li ul li a:hover {
+					color: #454545;
+					background: none;
+				}*/
+
+			#wrapNav .menu li ul ul {
+				display: none;
+			}
+}
+/*desktop reverse of above */
+@media screen and (min-width: 481px) {
+	#wrapNav .menu li:hover a {
 			display: block;
 			color: #454545;
 			background: url('image/layout/bg_wrapNav_hover.jpg') repeat-x;
@@ -1574,6 +1630,7 @@ span.taRight {
 			#wrapNav .menu li:hover ul ul {
 				display: none;
 			}
+}
 
 #contentPrimary .menu li, #contentPrimary .menu li a, #contentPrimary .menu li ul {
 	display: none;
@@ -2593,6 +2650,16 @@ input[type="button"].QuickSearchButton {
 	min-height: 40px;
 }
 
+#PC3470_panelNewsReader table tbody tr:first-of-type {
+	display: none;
+}
+
+.oneCol #wrapContent #wrapMedia .gutter {
+	padding-left: 1em;
+	padding-right: 1em;
+	max-width: 960px;
+}
+
 /* http://embedresponsively.com/ for the admissions video and any embedded object in general */
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
@@ -2817,7 +2884,7 @@ input[type="button"].QuickSearchButton {
 		text-decoration: none;
 	}
 	#internal #contentPrimary .sectionB {
-		text-align: justify;
+		/*text-align: justify;*/
 	}
 }
 /* logo collides with quick links and calendar */
