@@ -623,7 +623,11 @@ span.taRight { display:block; margin:0 0 0 auto; }
 
 	/* quicklinks */
 	#audienceNav .menu li.parent { background: url(image/layout/bg_quicklinks_left.png) left 50% no-repeat; }
-	#audienceNav .menu li.parent a { padding:0 36px 0 16px;background: url(image/layout/bg_quicklinks_right.png) right 50% no-repeat; }
+	#audienceNav .menu li.menuItem1 a { padding:0 36px 0 16px;background: url(image/layout/bg_quicklinks_right.png) right 50% no-repeat; }
+	#audienceNav .menu li.menuItem2 a {
+		padding: 0 36px 0 16px;
+		background: url('image/layout/bg_calendar_right.png') no-repeat right 50%;
+	}
 	#audienceNav .menu li.parent a,
 	#audienceNav .menu li.parent ul li a:hover{-moz-opacity:1;opacity:1;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=100);}
 	#audienceNav .menu li.parent ul li { display: block; float: none;border: none; margin: 0; padding: 0;background:none; }
