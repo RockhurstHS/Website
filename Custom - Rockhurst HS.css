@@ -1924,12 +1924,12 @@ span.taRight {
     background: url('image/layout/bg_quicklinks_left.png') no-repeat left 50%;
 }
 
-#audienceNav .menu li.menuItem1 > a { /* quick links */
+#audienceNav .menu > li.menuItem1 > a { /* quick links */
     padding: 0 36px 0 16px;
     background: url('image/layout/bg_quicklinks_right.png') no-repeat right 50%;
 }
 
-#audienceNav .menu li.menuItem2 > a { /* calendar */
+#audienceNav .menu > li.menuItem2 > a { /* calendar */
     padding: 0 36px 0 16px;
     background: url('image/layout/bg_calendar_right.png') no-repeat right 50%;
 }
