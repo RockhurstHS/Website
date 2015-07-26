@@ -2901,6 +2901,11 @@ input[type="radio"] {
 
 /* OLA & Forms  */
 
+#PC944_tbl, #PC944_tbl table {
+  /* this is the login field and all children tables */
+  width: 100%;
+}
+
 #NewFormListDiv,
 #MyFormListDiv {
     margin-bottom: 20px;
